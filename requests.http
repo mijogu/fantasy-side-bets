@@ -1,0 +1,77 @@
+################################################
+###     SLEEPER API docs
+###     https://docs.sleeper.com/
+################################################
+
+@host = https://api.sleeper.app/v1
+@username = mijogu
+@userid = 455441209981136896
+@leagueid = 986851253214863360
+
+###
+### Get User
+###
+GET {{host}}/user/{{username}} HTTP/1.1
+content-type: application/json
+
+###
+### Get Leagues for User
+###
+GET {{host}}/user/{{userid}}/leagues/nfl/2023 HTTP/1.1
+content-type: application/json
+
+###
+### Get League
+###
+    # league_id:    "986851253214863360"
+    # season:       "2023"
+    # sport:        "nfl"
+    # name:         "GFFL"
+GET {{host}}/league/{{leagueid}} HTTP/1.1
+content-type: application/json
+
+###
+### Get Rosters in League
+###
+    # owner_id:     "736400840952246272"
+    # league_id:    "986851253214863360"
+    # roster_id:    2
+    # starters:     ["1234"]
+    # players:      ["1234"]
+GET {{host}}/league/{{leagueid}}/rosters HTTP/1.1
+content-type: application/json
+
+###
+### Get Users in League
+###
+    # user_id:              "455441209981136896"
+    # display_name:         "mijogu"
+    # metadata[team_name]:  "Brown DotsOn my Johnston"
+GET {{host}}/league/{{leagueid}}/users HTTP/1.1
+content-type: application/json
+
+###
+### Get NFL Players
+###
+    # player_id:        "6904"
+    # position:         "QB"
+    # team:             "PHI"
+    # first_name:       "Jalen"
+    # last_name:        "Hurts"
+    # full_name:        "Jalen Hurts"
+    # fantasy_data_id:  21054
+    # espn_id:          4036261
+    # yahoo_id:         32723
+GET {{host}}/players/nfl HTTP/1.1
+content-type: application/json
+
+
+
+###########################################################
+###
+###     TANK01 API docs
+###     https://rapidapi.com/tank01/api/tank01-fantasy-stats
+###
+############################################################
+
+# @tankapi = 
