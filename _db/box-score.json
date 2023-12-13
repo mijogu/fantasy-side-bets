@@ -1,2163 +1,1610 @@
 {
-    "statusCode": 200,
-    "body": {
-      "gameStatus": "Completed",
-      "teamStats": {
-        "away": {
-          "totalYards": "328",
-          "rushingAttempts": "21",
-          "rushingYards": "103",
-          "fumblesLost": "0",
-          "penalties": "8-80",
-          "totalPlays": "57",
-          "possession": "26:29",
-          "passCompletionsAndAttempts": "24-35",
-          "passingFirstDowns": "13",
-          "interceptionsThrown": "1",
-          "sacksAndYardsLost": "1-10",
-          "thirdDownEfficiency": "3-11",
-          "yardsPerPlay": "5.8",
-          "redZoneScoredAndAttempted": "2-4",
-          "teamID": "22",
-          "defensiveOrSpecialTeamsTds": "1",
-          "totalDrives": "12",
-          "rushingFirstDowns": "4",
-          "firstDowns": "18",
-          "team": "NE",
-          "teamAbv": "NE",
-          "firstDownsFromPenalties": "1",
-          "fourthDownEfficiency": "0-0",
-          "passingYards": "225",
-          "yardsPerRush": "4.9",
-          "turnovers": "1",
-          "yardsPerPass": "6.3"
-        },
-        "home": {
-          "totalYards": "323",
-          "rushingAttempts": "22",
-          "rushingYards": "113",
-          "fumblesLost": "1",
-          "penalties": "8-48",
-          "totalPlays": "69",
-          "possession": "33:31",
-          "passCompletionsAndAttempts": "28-41",
-          "passingFirstDowns": "11",
-          "interceptionsThrown": "1",
-          "sacksAndYardsLost": "6-45",
-          "thirdDownEfficiency": "4-14",
-          "yardsPerPlay": "4.7",
-          "redZoneScoredAndAttempted": "1-3",
-          "teamID": "1",
-          "defensiveOrSpecialTeamsTds": "0",
-          "totalDrives": "12",
-          "rushingFirstDowns": "5",
-          "firstDowns": "19",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "firstDownsFromPenalties": "3",
-          "fourthDownEfficiency": "1-5",
-          "passingYards": "210",
-          "yardsPerRush": "5.1",
-          "turnovers": "2",
-          "yardsPerPass": "4.5"
-        }
+  "statusCode": 200,
+  "body": {
+    "gameStatus": "Completed",
+    "teamStats": {
+      "away": {
+        "totalYards": "368",
+        "rushingAttempts": "34",
+        "rushingYards": "118",
+        "fumblesLost": "1",
+        "penalties": "4-63",
+        "totalPlays": "70",
+        "possession": "32:38",
+        "passCompletionsAndAttempts": "22-35",
+        "passingFirstDowns": "11",
+        "interceptionsThrown": "0",
+        "sacksAndYardsLost": "1-3",
+        "thirdDownEfficiency": "5-15",
+        "yardsPerPlay": "5.3",
+        "redZoneScoredAndAttempted": "2-3",
+        "teamID": "11",
+        "defensiveOrSpecialTeamsTds": "1",
+        "totalDrives": "11",
+        "rushingFirstDowns": "8",
+        "firstDowns": "19",
+        "team": "DET",
+        "teamAbv": "DET",
+        "firstDownsFromPenalties": "0",
+        "fourthDownEfficiency": "1-3",
+        "passingYards": "250",
+        "yardsPerRush": "3.5",
+        "turnovers": "1",
+        "yardsPerPass": "6.9"
       },
-      "gameDate": "20221212",
-      "scoringPlays": [
-        {
-          "score": "Matt Prater 33 Yd Field Goal  ",
-          "scorePeriod": "Q2",
-          "homeScore": "3",
-          "awayScore": "0",
-          "teamID": "1",
-          "scoreDetails": "7 plays, 21 yards, 2:16",
-          "scoreType": "FG",
-          "scoreTime": "14:52",
-          "team": "ARI",
-          "playerIDs": [
-            "11122"
-          ]
-        },
-        {
-          "score": "Kevin Harris 14 Yd Run (Nick Folk Kick)",
-          "scorePeriod": "Q2",
-          "homeScore": "3",
-          "awayScore": "7",
-          "teamID": "22",
-          "scoreDetails": "8 plays, 75 yards, 3:27",
-          "scoreType": "TD",
-          "scoreTime": "11:25",
-          "team": "NE",
-          "playerIDs": [
-            "4570674",
-            "10621"
-          ]
-        },
-        {
-          "score": "Matt Prater 32 Yd Field Goal  ",
-          "scorePeriod": "Q2",
-          "homeScore": "6",
-          "awayScore": "7",
-          "teamID": "1",
-          "scoreDetails": "6 plays, 56 yards, 1:50",
-          "scoreType": "FG",
-          "scoreTime": "9:35",
-          "team": "ARI",
-          "playerIDs": [
-            "11122"
-          ]
-        },
-        {
-          "score": "James Conner 10 Yd Run (Matt Prater Kick)",
-          "scorePeriod": "Q2",
-          "homeScore": "13",
-          "awayScore": "7",
-          "teamID": "1",
-          "scoreDetails": "7 plays, 63 yards, 3:54",
-          "scoreType": "TD",
-          "scoreTime": "2:59",
-          "team": "ARI",
-          "playerIDs": [
-            "3045147",
-            "11122"
-          ]
-        },
-        {
-          "score": "Nick Folk 51 Yd Field Goal  ",
-          "scorePeriod": "Q2",
-          "homeScore": "13",
-          "awayScore": "10",
-          "teamID": "22",
-          "scoreDetails": "6 plays, 35 yards, 0:32",
-          "scoreType": "FG",
-          "scoreTime": "0:00",
-          "team": "NE",
-          "playerIDs": [
-            "10621"
-          ]
-        },
-        {
-          "score": "Nick Folk 23 Yd Field Goal  ",
-          "scorePeriod": "Q3",
-          "homeScore": "13",
-          "awayScore": "13",
-          "teamID": "22",
-          "scoreDetails": "8 plays, 71 yards, 4:45",
-          "scoreType": "FG",
-          "scoreTime": "10:15",
-          "team": "NE",
-          "playerIDs": [
-            "10621"
-          ]
-        },
-        {
-          "score": "Raekwon McMillan 23 Yd Fumble Return (Nick Folk Kick)",
-          "scorePeriod": "Q3",
-          "homeScore": "13",
-          "awayScore": "20",
-          "teamID": "22",
-          "scoreDetails": "2 plays, 16 yards, 0:47",
-          "scoreType": "TD",
-          "scoreTime": "5:32",
-          "team": "NE",
-          "playerIDs": [
-            "3121423",
-            "10621"
-          ]
-        },
-        {
-          "score": "Pierre Strong Jr. 3 Yd Run (Nick Folk Kick)",
-          "scorePeriod": "Q4",
-          "homeScore": "13",
-          "awayScore": "27",
-          "teamID": "22",
-          "scoreDetails": "5 plays, 63 yards, 1:58",
-          "scoreType": "TD",
-          "scoreTime": "14:09",
-          "team": "NE",
-          "playerIDs": [
-            "4249836",
-            "10621"
-          ]
-        }
-      ],
-      "network": "ESPN",
-      "teamIDHome": "1",
-      "teamIdAway": "22",
-      "homeResult": "L",
-      "away": "NE",
-      "attendance": "63,251",
-      "lineScore": {
-        "period": "Final",
-        "gameClock": "",
-        "away": {
-          "Q1": "0",
-          "Q2": "10",
-          "Q3": "10",
-          "Q4": "7",
-          "teamID": "22",
-          "totalPts": "27",
-          "teamAbv": "NE"
-        },
-        "home": {
-          "Q1": "0",
-          "Q2": "13",
-          "Q3": "0",
-          "Q4": "0",
-          "teamID": "1",
-          "totalPts": "13",
-          "teamAbv": "ARI"
-        }
+      "home": {
+        "totalYards": "316",
+        "rushingAttempts": "23",
+        "rushingYards": "90",
+        "fumblesLost": "0",
+        "penalties": "3-25",
+        "totalPlays": "62",
+        "possession": "27:22",
+        "passCompletionsAndAttempts": "21-39",
+        "passingFirstDowns": "10",
+        "interceptionsThrown": "1",
+        "sacksAndYardsLost": "0-0",
+        "thirdDownEfficiency": "5-14",
+        "yardsPerPlay": "5.1",
+        "redZoneScoredAndAttempted": "2-3",
+        "teamID": "16",
+        "defensiveOrSpecialTeamsTds": "0",
+        "totalDrives": "11",
+        "rushingFirstDowns": "6",
+        "firstDowns": "17",
+        "team": "KC",
+        "teamAbv": "KC",
+        "firstDownsFromPenalties": "1",
+        "fourthDownEfficiency": "0-1",
+        "passingYards": "226",
+        "yardsPerRush": "3.9",
+        "turnovers": "1",
+        "yardsPerPass": "5.8"
+      }
+    },
+    "gameDate": "20230907",
+    "scoringPlays": [
+      {
+        "score": "Amon-Ra St. Brown 9 Yd pass from Jared Goff (Riley Patterson Kick)",
+        "scorePeriod": "Q1",
+        "homeScore": "0",
+        "awayScore": "7",
+        "teamID": "11",
+        "scoreDetails": "14 plays, 91 yards, 8:04",
+        "scoreType": "TD",
+        "scoreTime": "2:46",
+        "team": "DET",
+        "playerIDs": [
+          "3046779",
+          "4374302",
+          "4243371"
+        ]
       },
-      "currentPeriod": "Final",
-      "gameLocation": "Glendale, AZ",
-      "home": "ARI",
-      "playerStats": {
-        "5713": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "Punting": {
-            "puntYds": "97",
-            "punts": "2",
-            "puntAvg": "48.5",
-            "puntsin20": "1",
-            "puntTouchBacks": "0",
-            "puntLong": "53"
-          },
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "playerID": "5713",
-          "longName": "Andy Lee",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "10621": {
-          "gameID": "20221212_NE@ARI",
-          "scoringPlays": [
-            {
-              "score": "Kevin Harris 14 Yd Run (Nick Folk Kick)",
-              "scorePeriod": "Q2",
-              "homeScore": "3",
-              "awayScore": "7",
-              "teamID": "22",
-              "scoreDetails": "8 plays, 75 yards, 3:27",
-              "scoreType": "TD",
-              "scoreTime": "11:25",
-              "team": "NE",
-              "playerIDs": [
-                "4570674",
-                "10621"
-              ]
-            },
-            {
-              "score": "Nick Folk 51 Yd Field Goal  ",
-              "scorePeriod": "Q2",
-              "homeScore": "13",
-              "awayScore": "10",
-              "teamID": "22",
-              "scoreDetails": "6 plays, 35 yards, 0:32",
-              "scoreType": "FG",
-              "scoreTime": "0:00",
-              "team": "NE",
-              "playerIDs": [
-                "10621"
-              ]
-            },
-            {
-              "score": "Nick Folk 23 Yd Field Goal  ",
-              "scorePeriod": "Q3",
-              "homeScore": "13",
-              "awayScore": "13",
-              "teamID": "22",
-              "scoreDetails": "8 plays, 71 yards, 4:45",
-              "scoreType": "FG",
-              "scoreTime": "10:15",
-              "team": "NE",
-              "playerIDs": [
-                "10621"
-              ]
-            },
-            {
-              "score": "Raekwon McMillan 23 Yd Fumble Return (Nick Folk Kick)",
-              "scorePeriod": "Q3",
-              "homeScore": "13",
-              "awayScore": "20",
-              "teamID": "22",
-              "scoreDetails": "2 plays, 16 yards, 0:47",
-              "scoreType": "TD",
-              "scoreTime": "5:32",
-              "team": "NE",
-              "playerIDs": [
-                "3121423",
-                "10621"
-              ]
-            },
-            {
-              "score": "Pierre Strong Jr. 3 Yd Run (Nick Folk Kick)",
-              "scorePeriod": "Q4",
-              "homeScore": "13",
-              "awayScore": "27",
-              "teamID": "22",
-              "scoreDetails": "5 plays, 63 yards, 1:58",
-              "scoreType": "TD",
-              "scoreTime": "14:09",
-              "team": "NE",
-              "playerIDs": [
-                "4249836",
-                "10621"
-              ]
-            }
-          ],
-          "teamID": "22",
-          "Kicking": {
-            "fgLong": "51",
-            "fgMade": "2",
-            "fgAttempts": "2",
-            "xpMade": "3",
-            "fgPct": "100.0",
-            "kickingPts": "9",
-            "xpAttempts": "3"
-          },
-          "team": "NE",
-          "teamAbv": "NE",
-          "playerID": "10621",
-          "longName": "Nick Folk",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "11122": {
-          "gameID": "20221212_NE@ARI",
-          "scoringPlays": [
-            {
-              "score": "Matt Prater 33 Yd Field Goal  ",
-              "scorePeriod": "Q2",
-              "homeScore": "3",
-              "awayScore": "0",
-              "teamID": "1",
-              "scoreDetails": "7 plays, 21 yards, 2:16",
-              "scoreType": "FG",
-              "scoreTime": "14:52",
-              "team": "ARI",
-              "playerIDs": [
-                "11122"
-              ]
-            },
-            {
-              "score": "Matt Prater 32 Yd Field Goal  ",
-              "scorePeriod": "Q2",
-              "homeScore": "6",
-              "awayScore": "7",
-              "teamID": "1",
-              "scoreDetails": "6 plays, 56 yards, 1:50",
-              "scoreType": "FG",
-              "scoreTime": "9:35",
-              "team": "ARI",
-              "playerIDs": [
-                "11122"
-              ]
-            },
-            {
-              "score": "James Conner 10 Yd Run (Matt Prater Kick)",
-              "scorePeriod": "Q2",
-              "homeScore": "13",
-              "awayScore": "7",
-              "teamID": "1",
-              "scoreDetails": "7 plays, 63 yards, 3:54",
-              "scoreType": "TD",
-              "scoreTime": "2:59",
-              "team": "ARI",
-              "playerIDs": [
-                "3045147",
-                "11122"
-              ]
-            }
-          ],
-          "teamID": "1",
-          "Kicking": {
-            "fgLong": "33",
-            "fgMade": "2",
-            "fgAttempts": "3",
-            "xpMade": "1",
-            "fgPct": "67.0",
-            "kickingPts": "7",
-            "xpAttempts": "1"
-          },
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "playerID": "11122",
-          "longName": "Matt Prater",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "11387": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "3",
-            "defTD": "0",
-            "soloTackles": "1",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "11387",
-          "longName": "Matthew Slater",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "13199": {
-          "gameID": "20221212_NE@ARI",
-          "Rushing": {
-            "rushAvg": "4.8",
-            "rushYds": "24",
-            "carries": "5",
-            "longRush": "9",
-            "rushTD": "0"
-          },
-          "Passing": {
-            "qbr": "18.2",
-            "rtg": "73.5",
-            "sacked": "6-45",
-            "passAttempts": "40",
-            "passAvg": "6.2",
-            "passTD": "0",
-            "passYds": "246",
-            "int": "1",
-            "passCompletions": "27"
-          },
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "fumblesLost": "0",
-            "defensiveInterceptions": "0",
-            "fumbles": "1",
-            "fumblesRecovered": "0"
-          },
-          "playerID": "13199",
-          "longName": "Colt McCoy",
-          "fantasyPoints": "11.24",
-          "fantasyPointsDefault": {
-            "standard": "11.24",
-            "PPR": "11.24",
-            "halfPPR": "11.24"
-          }
-        },
-        "13236": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "2",
-            "defTD": "0",
-            "soloTackles": "2",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "13236",
-          "longName": "Devin McCourty",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "13979": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "1",
-            "defTD": "0",
-            "soloTackles": "1",
-            "tfl": "1",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "13979",
-          "longName": "J.J. Watt",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "13983": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "1",
-            "recTD": "0",
-            "longRec": "7",
-            "targets": "2",
-            "recYds": "7",
-            "recAvg": "7.0"
-          },
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "playerID": "13983",
-          "longName": "A.J. Green",
-          "fantasyPoints": "1.2",
-          "fantasyPointsDefault": {
-            "standard": "0.7",
-            "PPR": "1.7",
-            "halfPPR": "1.2"
-          }
-        },
-        "14185": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "4",
-            "defTD": "0",
-            "soloTackles": "2",
-            "tfl": "1",
-            "qbHits": "1",
-            "defensiveInterceptions": "0",
-            "sacks": "0.5",
-            "passDeflections": "0"
-          },
-          "playerID": "14185",
-          "longName": "Lawrence Guy",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "15782": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "1",
-            "defTD": "0",
-            "soloTackles": "0",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "15782",
-          "longName": "Chris Banjo",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "15795": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "7",
-            "recTD": "0",
-            "longRec": "23",
-            "targets": "11",
-            "recYds": "79",
-            "recAvg": "11.3"
-          },
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "fumblesLost": "1",
-            "defensiveInterceptions": "0",
-            "fumbles": "1",
-            "fumblesRecovered": "0"
-          },
-          "playerID": "15795",
-          "longName": "DeAndre Hopkins",
-          "fantasyPoints": "9.4",
-          "fantasyPointsDefault": {
-            "standard": "6.9",
-            "PPR": "13.9",
-            "halfPPR": "10.4"
-          }
-        },
-        "15830": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "1",
-            "defTD": "0",
-            "soloTackles": "1",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "15830",
-          "longName": "Jamie Collins Sr.",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "17475": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "Punting": {
-            "puntYds": "253",
-            "punts": "6",
-            "puntAvg": "42.2",
-            "puntsin20": "2",
-            "puntTouchBacks": "2",
-            "puntLong": "49"
-          },
-          "team": "NE",
-          "teamAbv": "NE",
-          "playerID": "17475",
-          "longName": "Michael Palardy",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "17487": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "3",
-            "defTD": "0",
-            "soloTackles": "0",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "17487",
-          "longName": "Adrian Phillips",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "2511690": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "1",
-            "defTD": "0",
-            "soloTackles": "0",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "2511690",
-          "longName": "Carl Davis Jr.",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "2574808": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "4",
-            "recTD": "0",
-            "longRec": "21",
-            "targets": "4",
-            "recYds": "50",
-            "recAvg": "12.5"
-          },
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "playerID": "2574808",
-          "longName": "Robbie Anderson",
-          "fantasyPoints": "7.0",
-          "fantasyPointsDefault": {
-            "standard": "5.0",
-            "PPR": "9.0",
-            "halfPPR": "7.0"
-          }
-        },
-        "2576623": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "2",
-            "recTD": "0",
-            "longRec": "14",
-            "targets": "2",
-            "recYds": "24",
-            "recAvg": "12.0"
-          },
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "playerID": "2576623",
-          "longName": "DeVante Parker",
-          "fantasyPoints": "3.4",
-          "fantasyPointsDefault": {
-            "standard": "2.4",
-            "PPR": "4.4",
-            "halfPPR": "3.4"
-          }
-        },
-        "2576854": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "2",
-            "recTD": "0",
-            "longRec": "6",
-            "targets": "2",
-            "recYds": "7",
-            "recAvg": "3.5"
-          },
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "playerID": "2576854",
-          "longName": "Stephen Anderson",
-          "fantasyPoints": "1.7",
-          "fantasyPointsDefault": {
-            "standard": "0.7",
-            "PPR": "2.7",
-            "halfPPR": "1.7"
-          }
-        },
-        "2971027": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "4",
-            "defTD": "0",
-            "soloTackles": "2",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "2971027",
-          "longName": "Jonathan Jones",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "2971432": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "2",
-            "defTD": "0",
-            "soloTackles": "1",
-            "tfl": "1",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "2971432",
-          "longName": "Markus Golden",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "2971618": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "5",
-            "recTD": "0",
-            "longRec": "13",
-            "targets": "10",
-            "recYds": "32",
-            "recAvg": "6.4"
-          },
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "playerID": "2971618",
-          "longName": "Nelson Agholor",
-          "fantasyPoints": "5.7",
-          "fantasyPointsDefault": {
-            "standard": "3.2",
-            "PPR": "8.2",
-            "halfPPR": "5.7"
-          }
-        },
-        "2980080": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "2",
-            "defTD": "0",
-            "soloTackles": "0",
-            "tfl": "0",
-            "qbHits": "1",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "2980080",
-          "longName": "Deatrich Wise Jr.",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3042895": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "2",
-            "defTD": "0",
-            "soloTackles": "0",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "3042895",
-          "longName": "Tanner Vallejo",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3045147": {
-          "gameID": "20221212_NE@ARI",
-          "Rushing": {
-            "rushAvg": "5.7",
-            "rushYds": "85",
-            "carries": "15",
-            "longRush": "23",
-            "rushTD": "1"
-          },
-          "Receiving": {
-            "receptions": "6",
-            "recTD": "0",
-            "longRec": "9",
-            "targets": "7",
-            "recYds": "29",
-            "recAvg": "4.8"
-          },
-          "scoringPlays": [
-            {
-              "score": "James Conner 10 Yd Run (Matt Prater Kick)",
-              "scorePeriod": "Q2",
-              "homeScore": "13",
-              "awayScore": "7",
-              "teamID": "1",
-              "scoreDetails": "7 plays, 63 yards, 3:54",
-              "scoreType": "TD",
-              "scoreTime": "2:59",
-              "team": "ARI",
-              "playerIDs": [
-                "3045147",
-                "11122"
-              ]
-            }
-          ],
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "fumblesLost": "0",
-            "defensiveInterceptions": "0",
-            "fumbles": "0",
-            "fumblesRecovered": "1"
-          },
-          "playerID": "3045147",
-          "longName": "James Conner",
-          "fantasyPoints": "23.4",
-          "fantasyPointsDefault": {
-            "standard": "17.4",
-            "PPR": "23.4",
-            "halfPPR": "20.4"
-          }
-        },
-        "3045260": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "1",
-            "recTD": "0",
-            "longRec": "21",
-            "targets": "1",
-            "recYds": "21",
-            "recAvg": "21.0"
-          },
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "playerID": "3045260",
-          "longName": "Corey Clement",
-          "fantasyPoints": "2.6",
-          "fantasyPointsDefault": {
-            "standard": "2.1",
-            "PPR": "3.1",
-            "halfPPR": "2.6"
-          }
-        },
-        "3045523": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "5",
-            "recTD": "0",
-            "longRec": "16",
-            "targets": "5",
-            "recYds": "47",
-            "recAvg": "9.4"
-          },
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "playerID": "3045523",
-          "longName": "Kendrick Bourne",
-          "fantasyPoints": "7.2",
-          "fantasyPointsDefault": {
-            "standard": "4.7",
-            "PPR": "9.7",
-            "halfPPR": "7.2"
-          }
-        },
-        "3046439": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "3",
-            "recTD": "0",
-            "longRec": "39",
-            "targets": "3",
-            "recYds": "70",
-            "recAvg": "23.3"
-          },
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "playerID": "3046439",
-          "longName": "Hunter Henry",
-          "fantasyPoints": "8.5",
-          "fantasyPointsDefault": {
-            "standard": "7.0",
-            "PPR": "10.0",
-            "halfPPR": "8.5"
-          }
-        },
-        "3048897": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "Kicking": {
-            "kickReturns": "5",
-            "kickReturnTD": "0",
-            "kickReturnYds": "134",
-            "kickReturnAvg": "26.8",
-            "kickReturnLong": "30"
-          },
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "playerID": "3048897",
-          "longName": "Pharoh Cooper",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3052059": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "3",
-            "defTD": "0",
-            "soloTackles": "3",
-            "tfl": "1",
-            "qbHits": "1",
-            "defensiveInterceptions": "0",
-            "sacks": "1",
-            "passDeflections": "0"
-          },
-          "playerID": "3052059",
-          "longName": "Daniel Ekuale",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3054212": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "0",
-            "recTD": "0",
-            "longRec": "0",
-            "targets": "2",
-            "recYds": "0",
-            "recAvg": "0.0"
-          },
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "playerID": "3054212",
-          "longName": "Jonnu Smith",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3056354": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "5",
-            "defTD": "0",
-            "soloTackles": "4",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "3056354",
-          "longName": "Antonio Hamilton",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3115383": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "1",
-            "defTD": "0",
-            "soloTackles": "0",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "3115383",
-          "longName": "Davon Godchaux",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3115962": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "3",
-            "defTD": "0",
-            "soloTackles": "1",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "3115962",
-          "longName": "Jabrill Peppers",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3116187": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "10",
-            "defTD": "0",
-            "soloTackles": "3",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "3116187",
-          "longName": "Ja'Whaun Bentley",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3121423": {
-          "gameID": "20221212_NE@ARI",
-          "scoringPlays": [
-            {
-              "score": "Raekwon McMillan 23 Yd Fumble Return (Nick Folk Kick)",
-              "scorePeriod": "Q3",
-              "homeScore": "13",
-              "awayScore": "20",
-              "teamID": "22",
-              "scoreDetails": "2 plays, 16 yards, 0:47",
-              "scoreType": "TD",
-              "scoreTime": "5:32",
-              "team": "NE",
-              "playerIDs": [
-                "3121423",
-                "10621"
-              ]
-            }
-          ],
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "3",
-            "fumblesLost": "0",
-            "defTD": "1",
-            "fumbles": "0",
-            "fumblesRecovered": "1",
-            "soloTackles": "2",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "3121423",
-          "longName": "Raekwon McMillan",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3124587": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "6",
-            "defTD": "0",
-            "soloTackles": "5",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "1"
-          },
-          "playerID": "3124587",
-          "longName": "Jahlani Tavai",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3127287": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "5",
-            "defTD": "0",
-            "soloTackles": "3",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "3127287",
-          "longName": "Budda Baker",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3140643": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "5",
-            "defTD": "0",
-            "soloTackles": "2",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "3140643",
-          "longName": "Ben Niemann",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3728308": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "2",
-            "defTD": "0",
-            "soloTackles": "2",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "3728308",
-          "longName": "Jonathan Ledbetter",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3915282": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "2",
-            "defTD": "0",
-            "soloTackles": "2",
-            "tfl": "1",
-            "qbHits": "1",
-            "defensiveInterceptions": "0",
-            "sacks": "1",
-            "passDeflections": "1"
-          },
-          "playerID": "3915282",
-          "longName": "Zach Allen",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "3917315": {
-          "gameID": "20221212_NE@ARI",
-          "Rushing": {
-            "rushAvg": "3.0",
-            "rushYds": "3",
-            "carries": "1",
-            "longRush": "3",
-            "rushTD": "0"
-          },
-          "Passing": {
-            "qbr": "63.5",
-            "rtg": "104.2",
-            "sacked": "0-0",
-            "passAttempts": "1",
-            "passAvg": "9.0",
-            "passTD": "0",
-            "passYds": "9",
-            "int": "0",
-            "passCompletions": "1"
-          },
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "playerID": "3917315",
-          "longName": "Kyler Murray",
-          "fantasyPoints": "0.86",
-          "fantasyPointsDefault": {
-            "standard": "0.66",
-            "PPR": "0.66",
-            "halfPPR": "0.66"
-          }
-        },
-        "3961466": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "4",
-            "defTD": "0",
-            "soloTackles": "3",
-            "tfl": "1",
-            "qbHits": "2",
-            "defensiveInterceptions": "0",
-            "sacks": "1.5",
-            "passDeflections": "0"
-          },
-          "playerID": "3961466",
-          "longName": "Matthew Judon",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4035458": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "6",
-            "defTD": "0",
-            "soloTackles": "4",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "1"
-          },
-          "playerID": "4035458",
-          "longName": "Trayvon Mullen",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4035462": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "6",
-            "defTD": "0",
-            "soloTackles": "2",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "1",
-            "defensiveInterceptionsYards": "5",
-            "interceptionTDs": "0",
-            "sacks": "0",
-            "passDeflections": "1"
-          },
-          "playerID": "4035462",
-          "longName": "Isaiah Simmons",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4035666": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "1",
-            "defTD": "0",
-            "soloTackles": "1",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4035666",
-          "longName": "Leki Fotu",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4035686": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "0",
-            "defTD": "0",
-            "soloTackles": "0",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "1"
-          },
-          "playerID": "4035686",
-          "longName": "Jack Jones",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4037235": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "Punting": {
-            "puntReturns": "2",
-            "puntReturnYds": "17",
-            "puntReturnAvg": "8.5",
-            "puntReturnLong": "17",
-            "puntReturnTD": "0"
-          },
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "playerID": "4037235",
-          "longName": "Greg Dortch",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4039010": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "7",
-            "defTD": "0",
-            "soloTackles": "5",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4039010",
-          "longName": "Myles Bryant",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4040983": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "1",
-            "defTD": "0",
-            "soloTackles": "0",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4040983",
-          "longName": "Mack Wilson Sr.",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4043089": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "6",
-            "defTD": "0",
-            "soloTackles": "3",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4043089",
-          "longName": "Jalen Thompson",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4046528": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "5",
-            "defTD": "0",
-            "soloTackles": "4",
-            "tfl": "3",
-            "qbHits": "4",
-            "defensiveInterceptions": "0",
-            "sacks": "3",
-            "passDeflections": "0"
-          },
-          "playerID": "4046528",
-          "longName": "Josh Uche",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4047941": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "1",
-            "defTD": "0",
-            "soloTackles": "0",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4047941",
-          "longName": "Brenden Schooler",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4240595": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "2",
-            "defTD": "0",
-            "soloTackles": "1",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4240595",
-          "longName": "Marco Wilson",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4241372": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "4",
-            "recTD": "0",
-            "longRec": "16",
-            "targets": "8",
-            "recYds": "34",
-            "recAvg": "8.5"
-          },
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "playerID": "4241372",
-          "longName": "Marquise Brown",
-          "fantasyPoints": "5.4",
-          "fantasyPointsDefault": {
-            "standard": "3.4",
-            "PPR": "7.4",
-            "halfPPR": "5.4"
-          }
-        },
-        "4241464": {
-          "gameID": "20221212_NE@ARI",
-          "Rushing": {
-            "rushAvg": "-0.2",
-            "rushYds": "-1",
-            "carries": "5",
-            "longRush": "2",
-            "rushTD": "0"
-          },
-          "Passing": {
-            "qbr": "25.4",
-            "rtg": "75.3",
-            "sacked": "1-10",
-            "passAttempts": "35",
-            "passAvg": "6.7",
-            "passTD": "0",
-            "passYds": "235",
-            "int": "1",
-            "passCompletions": "24"
-          },
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "fumblesLost": "0",
-            "defensiveInterceptions": "0",
-            "fumbles": "1",
-            "fumblesRecovered": "1"
-          },
-          "playerID": "4241464",
-          "longName": "Mac Jones",
-          "fantasyPoints": "8.3",
-          "fantasyPointsDefault": {
-            "standard": "8.3",
-            "PPR": "8.3",
-            "halfPPR": "8.3"
-          }
-        },
-        "4241720": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "1",
-            "recTD": "0",
-            "longRec": "12",
-            "targets": "1",
-            "recYds": "12",
-            "recAvg": "12.0"
-          },
-          "teamID": "22",
-          "Kicking": {
-            "kickReturns": "2",
-            "kickReturnTD": "0",
-            "kickReturnYds": "47",
-            "kickReturnAvg": "23.5",
-            "kickReturnLong": "25"
-          },
-          "Punting": {
-            "puntReturns": "1",
-            "puntReturnYds": "7",
-            "puntReturnAvg": "7.0",
-            "puntReturnLong": "7",
-            "puntReturnTD": "0"
-          },
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "8",
-            "defTD": "0",
-            "soloTackles": "7",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "1",
-            "defensiveInterceptionsYards": "18",
-            "interceptionTDs": "0",
-            "sacks": "0",
-            "passDeflections": "2"
-          },
-          "playerID": "4241720",
-          "longName": "Marcus Jones",
-          "fantasyPoints": "1.7",
-          "fantasyPointsDefault": {
-            "standard": "1.2",
-            "PPR": "2.2",
-            "halfPPR": "1.7"
-          }
-        },
-        "4241995": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "1",
-            "defTD": "0",
-            "soloTackles": "1",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4241995",
-          "longName": "Shaun Wade",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4244606": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "5",
-            "defTD": "0",
-            "soloTackles": "4",
-            "tfl": "1",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4244606",
-          "longName": "Zaven Collins",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4249836": {
-          "gameID": "20221212_NE@ARI",
-          "Rushing": {
-            "rushAvg": "14.0",
-            "rushYds": "70",
-            "carries": "5",
-            "longRush": "44",
-            "rushTD": "1"
-          },
-          "Receiving": {
-            "receptions": "2",
-            "recTD": "0",
-            "longRec": "16",
-            "targets": "2",
-            "recYds": "20",
-            "recAvg": "10.0"
-          },
-          "scoringPlays": [
-            {
-              "score": "Pierre Strong Jr. 3 Yd Run (Nick Folk Kick)",
-              "scorePeriod": "Q4",
-              "homeScore": "13",
-              "awayScore": "27",
-              "teamID": "22",
-              "scoreDetails": "5 plays, 63 yards, 1:58",
-              "scoreType": "TD",
-              "scoreTime": "14:09",
-              "team": "NE",
-              "playerIDs": [
-                "4249836",
-                "10621"
-              ]
-            }
-          ],
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "1",
-            "defTD": "0",
-            "soloTackles": "0",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4249836",
-          "longName": "Pierre Strong Jr.",
-          "fantasyPoints": "17.0",
-          "fantasyPointsDefault": {
-            "standard": "15.0",
-            "PPR": "17.0",
-            "halfPPR": "16.0"
-          }
-        },
-        "4334300": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "1",
-            "defTD": "0",
-            "soloTackles": "0",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4334300",
-          "longName": "Dennis Gardeck",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4360080": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "3",
-            "defTD": "0",
-            "soloTackles": "2",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4360080",
-          "longName": "Myjai Sanders",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4361307": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "3",
-            "recTD": "0",
-            "longRec": "15",
-            "targets": "6",
-            "recYds": "28",
-            "recAvg": "9.3"
-          },
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "1",
-            "defTD": "0",
-            "soloTackles": "1",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4361307",
-          "longName": "Trey McBride",
-          "fantasyPoints": "4.3",
-          "fantasyPointsDefault": {
-            "standard": "2.8",
-            "PPR": "5.8",
-            "halfPPR": "4.3"
-          }
-        },
-        "4361510": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "0",
-            "defTD": "0",
-            "soloTackles": "0",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "1"
-          },
-          "playerID": "4361510",
-          "longName": "Cameron Thomas",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4362087": {
-          "gameID": "20221212_NE@ARI",
-          "Rushing": {
-            "rushAvg": "1.0",
-            "rushYds": "1",
-            "carries": "1",
-            "longRush": "1",
-            "rushTD": "0"
-          },
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "playerID": "4362087",
-          "longName": "Keaontay Ingram",
-          "fantasyPoints": "0.3",
-          "fantasyPointsDefault": {
-            "standard": "0.1",
-            "PPR": "0.1",
-            "halfPPR": "0.1"
-          }
-        },
-        "4362921": {
-          "gameID": "20221212_NE@ARI",
-          "Receiving": {
-            "receptions": "4",
-            "recTD": "0",
-            "longRec": "12",
-            "targets": "5",
-            "recYds": "28",
-            "recAvg": "7.0"
-          },
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "playerID": "4362921",
-          "longName": "Tyquan Thornton",
-          "fantasyPoints": "4.8",
-          "fantasyPointsDefault": {
-            "standard": "2.8",
-            "PPR": "6.8",
-            "halfPPR": "4.8"
-          }
-        },
-        "4401811": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "9",
-            "defTD": "0",
-            "soloTackles": "7",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4401811",
-          "longName": "Kyle Dugger",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4569173": {
-          "gameID": "20221212_NE@ARI",
-          "Rushing": {
-            "rushAvg": "2.7",
-            "rushYds": "8",
-            "carries": "3",
-            "longRush": "4",
-            "rushTD": "0"
-          },
-          "Receiving": {
-            "receptions": "2",
-            "recTD": "0",
-            "longRec": "4",
-            "targets": "3",
-            "recYds": "2",
-            "recAvg": "1.0"
-          },
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "playerID": "4569173",
-          "longName": "Rhamondre Stevenson",
-          "fantasyPoints": "2.6",
-          "fantasyPointsDefault": {
-            "standard": "1.0",
-            "PPR": "3.0",
-            "halfPPR": "2.0"
-          }
-        },
-        "4570674": {
-          "gameID": "20221212_NE@ARI",
-          "Rushing": {
-            "rushAvg": "3.3",
-            "rushYds": "26",
-            "carries": "8",
-            "longRush": "14",
-            "rushTD": "1"
-          },
-          "scoringPlays": [
-            {
-              "score": "Kevin Harris 14 Yd Run (Nick Folk Kick)",
-              "scorePeriod": "Q2",
-              "homeScore": "3",
-              "awayScore": "7",
-              "teamID": "22",
-              "scoreDetails": "8 plays, 75 yards, 3:27",
-              "scoreType": "TD",
-              "scoreTime": "11:25",
-              "team": "NE",
-              "playerIDs": [
-                "4570674",
-                "10621"
-              ]
-            }
-          ],
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "playerID": "4570674",
-          "longName": "Kevin Harris",
-          "fantasyPoints": "10.2",
-          "fantasyPointsDefault": {
-            "standard": "8.6",
-            "PPR": "8.6",
-            "halfPPR": "8.6"
-          }
-        },
-        "4693173": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "22",
-          "team": "NE",
-          "teamAbv": "NE",
-          "Defense": {
-            "totalTackles": "2",
-            "defTD": "0",
-            "soloTackles": "1",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "0"
-          },
-          "playerID": "4693173",
-          "longName": "DaMarcus Mitchell",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        },
-        "4911023": {
-          "gameID": "20221212_NE@ARI",
-          "teamID": "1",
-          "team": "ARI",
-          "teamAbv": "ARI",
-          "Defense": {
-            "totalTackles": "1",
-            "defTD": "0",
-            "soloTackles": "1",
-            "tfl": "0",
-            "qbHits": "0",
-            "defensiveInterceptions": "0",
-            "sacks": "0",
-            "passDeflections": "1"
-          },
-          "playerID": "4911023",
-          "longName": "Christian Matthew",
-          "fantasyPoints": "0.0",
-          "fantasyPointsDefault": {
-            "standard": "0.0",
-            "PPR": "0.0",
-            "halfPPR": "0.0"
-          }
-        }
+      {
+        "score": "Rashee Rice 1 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
+        "scorePeriod": "Q2",
+        "homeScore": "7",
+        "awayScore": "7",
+        "teamID": "16",
+        "scoreDetails": "13 plays, 75 yards, 5:56",
+        "scoreType": "TD",
+        "scoreTime": "11:50",
+        "team": "KC",
+        "playerIDs": [
+          "3139477",
+          "4428331",
+          "3055899"
+        ]
       },
-      "arenaCapacity": "65,000",
-      "arena": "State Farm Stadium",
-      "homePts": "13",
-      "awayResult": "W",
-      "teamIDAway": "22",
-      "Referees": "Perry Paganelli, Dyrol Prioleau, Mark Hittner, Clay Reynard, Bryan Neale, Shawn Smith, Michael Dolce",
+      {
+        "score": "Blake Bell 4 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
+        "scorePeriod": "Q2",
+        "homeScore": "14",
+        "awayScore": "7",
+        "teamID": "16",
+        "scoreDetails": "6 plays, 82 yards, 1:28",
+        "scoreType": "TD",
+        "scoreTime": "0:34",
+        "team": "KC",
+        "playerIDs": [
+          "3139477",
+          "2514206",
+          "3055899"
+        ]
+      },
+      {
+        "score": "Brian Branch 50 Yd Interception Return (Riley Patterson Kick)",
+        "scorePeriod": "Q3",
+        "homeScore": "14",
+        "awayScore": "14",
+        "teamID": "11",
+        "scoreDetails": "3 plays, 4 yards, 0:50",
+        "scoreType": "TD",
+        "scoreTime": "10:54",
+        "team": "DET",
+        "playerIDs": [
+          "4692025",
+          "4243371"
+        ]
+      },
+      {
+        "score": "Harrison Butker 35 Yd Field Goal  ",
+        "scorePeriod": "Q3",
+        "homeScore": "17",
+        "awayScore": "14",
+        "teamID": "16",
+        "scoreDetails": "8 plays, 73 yards, 3:34",
+        "scoreType": "FG",
+        "scoreTime": "2:10",
+        "team": "KC",
+        "playerIDs": [
+          "3055899"
+        ]
+      },
+      {
+        "score": "Harrison Butker 39 Yd Field Goal  ",
+        "scorePeriod": "Q4",
+        "homeScore": "20",
+        "awayScore": "14",
+        "teamID": "16",
+        "scoreDetails": "8 plays, 47 yards, 3:55",
+        "scoreType": "FG",
+        "scoreTime": "12:11",
+        "team": "KC",
+        "playerIDs": [
+          "3055899"
+        ]
+      },
+      {
+        "score": "David Montgomery 8 Yd Run (Riley Patterson Kick)",
+        "scorePeriod": "Q4",
+        "homeScore": "20",
+        "awayScore": "21",
+        "teamID": "11",
+        "scoreDetails": "9 plays, 75 yards, 5:05",
+        "scoreType": "TD",
+        "scoreTime": "7:06",
+        "team": "DET",
+        "playerIDs": [
+          "4035538",
+          "4243371"
+        ]
+      }
+    ],
+    "network": "NBC",
+    "teamIDHome": "16",
+    "homeResult": "L",
+    "away": "DET",
+    "attendance": "73,522",
+    "lineScore": {
+      "period": "Final",
       "gameClock": "",
-      "awayPts": "27",
-      "gameID": "20221212_NE@ARI",
-      "seasonType": "Regular Season"
-    }
+      "away": {
+        "Q1": "7",
+        "Q2": "0",
+        "Q3": "7",
+        "Q4": "7",
+        "teamID": "11",
+        "totalPts": "21",
+        "teamAbv": "DET"
+      },
+      "home": {
+        "Q1": "0",
+        "Q2": "14",
+        "Q3": "3",
+        "Q4": "3",
+        "teamID": "16",
+        "totalPts": "20",
+        "teamAbv": "KC"
+      }
+    },
+    "currentPeriod": "Final",
+    "gameLocation": "Kansas City, MO",
+    "home": "KC",
+    "playerStats": {
+      "15072": {
+        "gameID": "20230907_DET@KC",
+        "Receiving": {
+          "receptions": "2",
+          "recTD": "0",
+          "longRec": "5",
+          "targets": "6",
+          "recYds": "8",
+          "recAvg": "4.0"
+        },
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "fumblesLost": "1",
+          "defensiveInterceptions": "0",
+          "fumbles": "1",
+          "fumblesRecovered": "0"
+        },
+        "playerID": "15072",
+        "longName": "Marvin Jones Jr."
+      },
+      "16782": {
+        "gameID": "20230907_DET@KC",
+        "Receiving": {
+          "receptions": "1",
+          "recTD": "0",
+          "longRec": "10",
+          "targets": "2",
+          "recYds": "10",
+          "recAvg": "10.0"
+        },
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "16782",
+        "longName": "Jerick McKinnon"
+      },
+      "2514206": {
+        "gameID": "20230907_DET@KC",
+        "Receiving": {
+          "receptions": "2",
+          "recTD": "1",
+          "longRec": "8",
+          "targets": "3",
+          "recYds": "12",
+          "recAvg": "6.0"
+        },
+        "scoringPlays": [
+          {
+            "score": "Blake Bell 4 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
+            "scorePeriod": "Q2",
+            "homeScore": "14",
+            "awayScore": "7",
+            "teamID": "16",
+            "scoreDetails": "6 plays, 82 yards, 1:28",
+            "scoreType": "TD",
+            "scoreTime": "0:34",
+            "team": "KC",
+            "playerIDs": [
+              "3139477",
+              "2514206",
+              "3055899"
+            ]
+          }
+        ],
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "2514206",
+        "longName": "Blake Bell"
+      },
+      "2973405": {
+        "gameID": "20230907_DET@KC",
+        "Receiving": {
+          "receptions": "1",
+          "recTD": "0",
+          "longRec": "20",
+          "targets": "1",
+          "recYds": "20",
+          "recAvg": "20.0"
+        },
+        "teamID": "11",
+        "Punting": {
+          "puntReturns": "1",
+          "puntReturnYds": "16",
+          "puntReturnAvg": "16.0",
+          "puntReturnLong": "16",
+          "puntReturnTD": "0"
+        },
+        "team": "DET",
+        "teamAbv": "DET",
+        "playerID": "2973405",
+        "longName": "Kalif Raymond"
+      },
+      "3043107": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "6",
+          "defTD": "0",
+          "soloTackles": "5",
+          "tfl": "0",
+          "qbHits": "1",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "1"
+        },
+        "playerID": "3043107",
+        "longName": "Alex Anzalone"
+      },
+      "3044729": {
+        "gameID": "20230907_DET@KC",
+        "Rushing": {
+          "rushAvg": "3.0",
+          "rushYds": "3",
+          "carries": "1",
+          "longRush": "3",
+          "rushTD": "0"
+        },
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "1",
+          "defTD": "0",
+          "soloTackles": "1",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "3044729",
+        "longName": "Jalen Reeves-Maybin"
+      },
+      "3046779": {
+        "gameID": "20230907_DET@KC",
+        "Rushing": {
+          "rushAvg": "-0.2",
+          "rushYds": "-1",
+          "carries": "5",
+          "longRush": "2",
+          "rushTD": "0"
+        },
+        "Passing": {
+          "qbr": "73.9",
+          "rtg": "94.1",
+          "sacked": "1-3",
+          "passAttempts": "35",
+          "passAvg": "7.2",
+          "passTD": "1",
+          "passYds": "253",
+          "int": "0",
+          "passCompletions": "22"
+        },
+        "scoringPlays": [
+          {
+            "score": "Amon-Ra St. Brown 9 Yd pass from Jared Goff (Riley Patterson Kick)",
+            "scorePeriod": "Q1",
+            "homeScore": "0",
+            "awayScore": "7",
+            "teamID": "11",
+            "scoreDetails": "14 plays, 91 yards, 8:04",
+            "scoreType": "TD",
+            "scoreTime": "2:46",
+            "team": "DET",
+            "playerIDs": [
+              "3046779",
+              "4374302",
+              "4243371"
+            ]
+          }
+        ],
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "fumblesLost": "0",
+          "defensiveInterceptions": "0",
+          "fumbles": "0",
+          "fumblesRecovered": "1"
+        },
+        "playerID": "3046779",
+        "longName": "Jared Goff"
+      },
+      "3051738": {
+        "gameID": "20230907_DET@KC",
+        "Receiving": {
+          "receptions": "2",
+          "recTD": "0",
+          "longRec": "34",
+          "targets": "2",
+          "recYds": "48",
+          "recAvg": "24.0"
+        },
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "3051738",
+        "longName": "Marquez Valdes-Scantling"
+      },
+      "3051852": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "2",
+          "defTD": "0",
+          "soloTackles": "1",
+          "tfl": "0",
+          "qbHits": "1",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "3051852",
+        "longName": "Charles Harris"
+      },
+      "3055899": {
+        "gameID": "20230907_DET@KC",
+        "scoringPlays": [
+          {
+            "score": "Rashee Rice 1 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
+            "scorePeriod": "Q2",
+            "homeScore": "7",
+            "awayScore": "7",
+            "teamID": "16",
+            "scoreDetails": "13 plays, 75 yards, 5:56",
+            "scoreType": "TD",
+            "scoreTime": "11:50",
+            "team": "KC",
+            "playerIDs": [
+              "3139477",
+              "4428331",
+              "3055899"
+            ]
+          },
+          {
+            "score": "Blake Bell 4 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
+            "scorePeriod": "Q2",
+            "homeScore": "14",
+            "awayScore": "7",
+            "teamID": "16",
+            "scoreDetails": "6 plays, 82 yards, 1:28",
+            "scoreType": "TD",
+            "scoreTime": "0:34",
+            "team": "KC",
+            "playerIDs": [
+              "3139477",
+              "2514206",
+              "3055899"
+            ]
+          },
+          {
+            "score": "Harrison Butker 35 Yd Field Goal  ",
+            "scorePeriod": "Q3",
+            "homeScore": "17",
+            "awayScore": "14",
+            "teamID": "16",
+            "scoreDetails": "8 plays, 73 yards, 3:34",
+            "scoreType": "FG",
+            "scoreTime": "2:10",
+            "team": "KC",
+            "playerIDs": [
+              "3055899"
+            ]
+          },
+          {
+            "score": "Harrison Butker 39 Yd Field Goal  ",
+            "scorePeriod": "Q4",
+            "homeScore": "20",
+            "awayScore": "14",
+            "teamID": "16",
+            "scoreDetails": "8 plays, 47 yards, 3:55",
+            "scoreType": "FG",
+            "scoreTime": "12:11",
+            "team": "KC",
+            "playerIDs": [
+              "3055899"
+            ]
+          }
+        ],
+        "teamID": "16",
+        "Kicking": {
+          "fgLong": "39",
+          "fgMade": "2",
+          "fgAttempts": "2",
+          "xpMade": "2",
+          "fgPct": "100.0",
+          "kickingPts": "8",
+          "xpAttempts": "2"
+        },
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "3055899",
+        "longName": "Harrison Butker"
+      },
+      "3115306": {
+        "gameID": "20230907_DET@KC",
+        "Receiving": {
+          "receptions": "4",
+          "recTD": "0",
+          "longRec": "33",
+          "targets": "7",
+          "recYds": "80",
+          "recAvg": "20.0"
+        },
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "playerID": "3115306",
+        "longName": "Josh Reynolds"
+      },
+      "3118892": {
+        "gameID": "20230907_DET@KC",
+        "Receiving": {
+          "receptions": "2",
+          "recTD": "0",
+          "longRec": "26",
+          "targets": "4",
+          "recYds": "45",
+          "recAvg": "22.5"
+        },
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "3118892",
+        "longName": "Justin Watson"
+      },
+      "3122899": {
+        "gameID": "20230907_DET@KC",
+        "Receiving": {
+          "receptions": "1",
+          "recTD": "0",
+          "longRec": "6",
+          "targets": "2",
+          "recYds": "6",
+          "recAvg": "6.0"
+        },
+        "teamID": "16",
+        "Punting": {
+          "puntReturns": "3",
+          "puntReturnYds": "16",
+          "puntReturnAvg": "5.3",
+          "puntReturnLong": "9",
+          "puntReturnTD": "0"
+        },
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "3122899",
+        "longName": "Richie James"
+      },
+      "3122930": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "3",
+          "defTD": "0",
+          "soloTackles": "1",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "3122930",
+        "longName": "Derrick Nnadi"
+      },
+      "3128689": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "fumblesLost": "0",
+          "defensiveInterceptions": "0",
+          "fumbles": "1",
+          "fumblesRecovered": "0"
+        },
+        "playerID": "3128689",
+        "longName": "Frank Ragnow"
+      },
+      "3129310": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "2",
+          "defTD": "0",
+          "soloTackles": "1",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "3129310",
+        "longName": "Drue Tranquill"
+      },
+      "3134316": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "3",
+          "defTD": "0",
+          "soloTackles": "1",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "3134316",
+        "longName": "Matt Dickerson"
+      },
+      "3139477": {
+        "gameID": "20230907_DET@KC",
+        "Rushing": {
+          "rushAvg": "7.5",
+          "rushYds": "45",
+          "carries": "6",
+          "longRush": "16",
+          "rushTD": "0"
+        },
+        "Passing": {
+          "qbr": "76.8",
+          "rtg": "77.5",
+          "sacked": "0-0",
+          "passAttempts": "39",
+          "passAvg": "5.8",
+          "passTD": "2",
+          "passYds": "226",
+          "int": "1",
+          "passCompletions": "21"
+        },
+        "scoringPlays": [
+          {
+            "score": "Rashee Rice 1 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
+            "scorePeriod": "Q2",
+            "homeScore": "7",
+            "awayScore": "7",
+            "teamID": "16",
+            "scoreDetails": "13 plays, 75 yards, 5:56",
+            "scoreType": "TD",
+            "scoreTime": "11:50",
+            "team": "KC",
+            "playerIDs": [
+              "3139477",
+              "4428331",
+              "3055899"
+            ]
+          },
+          {
+            "score": "Blake Bell 4 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
+            "scorePeriod": "Q2",
+            "homeScore": "14",
+            "awayScore": "7",
+            "teamID": "16",
+            "scoreDetails": "6 plays, 82 yards, 1:28",
+            "scoreType": "TD",
+            "scoreTime": "0:34",
+            "team": "KC",
+            "playerIDs": [
+              "3139477",
+              "2514206",
+              "3055899"
+            ]
+          }
+        ],
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "3139477",
+        "longName": "Patrick Mahomes"
+      },
+      "3155647": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "2",
+          "defTD": "0",
+          "soloTackles": "1",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "3155647",
+        "longName": "Mike Edwards"
+      },
+      "3915398": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "Punting": {
+          "puntYds": "247",
+          "punts": "5",
+          "puntAvg": "49.4",
+          "puntsin20": "3",
+          "puntTouchBacks": "0",
+          "puntLong": "58"
+        },
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "3915398",
+        "longName": "Tommy Townsend"
+      },
+      "3915487": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "6",
+          "defTD": "0",
+          "soloTackles": "4",
+          "tfl": "1",
+          "qbHits": "1",
+          "defensiveInterceptions": "0",
+          "sacks": "1",
+          "passDeflections": "1"
+        },
+        "playerID": "3915487",
+        "longName": "Mike Danna"
+      },
+      "3916370": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "Punting": {
+          "puntYds": "222",
+          "punts": "5",
+          "puntAvg": "44.4",
+          "puntsin20": "3",
+          "puntTouchBacks": "0",
+          "puntLong": "61"
+        },
+        "team": "DET",
+        "teamAbv": "DET",
+        "playerID": "3916370",
+        "longName": "Jack Fox"
+      },
+      "3931399": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "6",
+          "defTD": "0",
+          "soloTackles": "4",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "2"
+        },
+        "playerID": "3931399",
+        "longName": "Justin Reid"
+      },
+      "4027919": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "3",
+          "defTD": "0",
+          "soloTackles": "2",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4027919",
+        "longName": "Khalil Dorsey"
+      },
+      "4034953": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "5",
+          "defTD": "0",
+          "soloTackles": "5",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "2"
+        },
+        "playerID": "4034953",
+        "longName": "C.J. Gardner-Johnson"
+      },
+      "4035299": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "4",
+          "defTD": "0",
+          "soloTackles": "3",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4035299",
+        "longName": "Benito Jones"
+      },
+      "4035538": {
+        "gameID": "20230907_DET@KC",
+        "Rushing": {
+          "rushAvg": "3.5",
+          "rushYds": "74",
+          "carries": "21",
+          "longRush": "8",
+          "rushTD": "1"
+        },
+        "scoringPlays": [
+          {
+            "score": "David Montgomery 8 Yd Run (Riley Patterson Kick)",
+            "scorePeriod": "Q4",
+            "homeScore": "20",
+            "awayScore": "21",
+            "teamID": "11",
+            "scoreDetails": "9 plays, 75 yards, 5:05",
+            "scoreType": "TD",
+            "scoreTime": "7:06",
+            "team": "DET",
+            "playerIDs": [
+              "4035538",
+              "4243371"
+            ]
+          }
+        ],
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "playerID": "4035538",
+        "longName": "David Montgomery"
+      },
+      "4040432": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "6",
+          "defTD": "0",
+          "soloTackles": "3",
+          "tfl": "1",
+          "qbHits": "1",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4040432",
+        "longName": "L'Jarius Sneed"
+      },
+      "4240472": {
+        "gameID": "20230907_DET@KC",
+        "Receiving": {
+          "receptions": "3",
+          "recTD": "0",
+          "longRec": "24",
+          "targets": "5",
+          "recYds": "31",
+          "recAvg": "10.3"
+        },
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "4240472",
+        "longName": "Noah Gray"
+      },
+      "4240600": {
+        "gameID": "20230907_DET@KC",
+        "Rushing": {
+          "rushAvg": "-1.0",
+          "rushYds": "-1",
+          "carries": "1",
+          "longRush": "-1",
+          "rushTD": "0"
+        },
+        "Receiving": {
+          "receptions": "1",
+          "recTD": "0",
+          "longRec": "1",
+          "targets": "5",
+          "recYds": "1",
+          "recAvg": "1.0"
+        },
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "4240600",
+        "longName": "Kadarius Toney"
+      },
+      "4240608": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "0",
+          "defTD": "0",
+          "soloTackles": "0",
+          "tfl": "0",
+          "qbHits": "1",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4240608",
+        "longName": "James Houston"
+      },
+      "4241411": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "1",
+          "defTD": "0",
+          "soloTackles": "1",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4241411",
+        "longName": "Malcolm Rodriguez"
+      },
+      "4242214": {
+        "gameID": "20230907_DET@KC",
+        "Rushing": {
+          "rushAvg": "3.7",
+          "rushYds": "22",
+          "carries": "6",
+          "longRush": "5",
+          "rushTD": "0"
+        },
+        "Receiving": {
+          "receptions": "1",
+          "recTD": "0",
+          "longRec": "7",
+          "targets": "1",
+          "recYds": "7",
+          "recAvg": "7.0"
+        },
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "4242214",
+        "longName": "Clyde Edwards-Helaire"
+      },
+      "4242392": {
+        "gameID": "20230907_DET@KC",
+        "Receiving": {
+          "receptions": "2",
+          "recTD": "0",
+          "longRec": "9",
+          "targets": "2",
+          "recYds": "17",
+          "recAvg": "8.5"
+        },
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "playerID": "4242392",
+        "longName": "Brock Wright"
+      },
+      "4243371": {
+        "gameID": "20230907_DET@KC",
+        "scoringPlays": [
+          {
+            "score": "Amon-Ra St. Brown 9 Yd pass from Jared Goff (Riley Patterson Kick)",
+            "scorePeriod": "Q1",
+            "homeScore": "0",
+            "awayScore": "7",
+            "teamID": "11",
+            "scoreDetails": "14 plays, 91 yards, 8:04",
+            "scoreType": "TD",
+            "scoreTime": "2:46",
+            "team": "DET",
+            "playerIDs": [
+              "3046779",
+              "4374302",
+              "4243371"
+            ]
+          },
+          {
+            "score": "Brian Branch 50 Yd Interception Return (Riley Patterson Kick)",
+            "scorePeriod": "Q3",
+            "homeScore": "14",
+            "awayScore": "14",
+            "teamID": "11",
+            "scoreDetails": "3 plays, 4 yards, 0:50",
+            "scoreType": "TD",
+            "scoreTime": "10:54",
+            "team": "DET",
+            "playerIDs": [
+              "4692025",
+              "4243371"
+            ]
+          },
+          {
+            "score": "David Montgomery 8 Yd Run (Riley Patterson Kick)",
+            "scorePeriod": "Q4",
+            "homeScore": "20",
+            "awayScore": "21",
+            "teamID": "11",
+            "scoreDetails": "9 plays, 75 yards, 5:05",
+            "scoreType": "TD",
+            "scoreTime": "7:06",
+            "team": "DET",
+            "playerIDs": [
+              "4035538",
+              "4243371"
+            ]
+          }
+        ],
+        "teamID": "11",
+        "Kicking": {
+          "fgLong": "0",
+          "fgMade": "0",
+          "fgAttempts": "0",
+          "xpMade": "3",
+          "fgPct": "0.0",
+          "kickingPts": "3",
+          "xpAttempts": "3"
+        },
+        "team": "DET",
+        "teamAbv": "DET",
+        "playerID": "4243371",
+        "longName": "Riley Patterson"
+      },
+      "4247726": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "7",
+          "fumblesLost": "0",
+          "defTD": "0",
+          "fumbles": "0",
+          "fumblesRecovered": "1",
+          "soloTackles": "4",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4247726",
+        "longName": "Bryan Cook"
+      },
+      "4259804": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "3",
+          "defTD": "0",
+          "soloTackles": "2",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4259804",
+        "longName": "Willie Gay"
+      },
+      "4259994": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "3",
+          "defTD": "0",
+          "soloTackles": "3",
+          "tfl": "1",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4259994",
+        "longName": "Josh Paschal"
+      },
+      "4260409": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "6",
+          "defTD": "0",
+          "soloTackles": "4",
+          "tfl": "1",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4260409",
+        "longName": "Derrick Barnes"
+      },
+      "4360306": {
+        "gameID": "20230907_DET@KC",
+        "Receiving": {
+          "receptions": "1",
+          "recTD": "0",
+          "longRec": "6",
+          "targets": "1",
+          "recYds": "6",
+          "recAvg": "6.0"
+        },
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "4360306",
+        "longName": "Justyn Ross"
+      },
+      "4360383": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "4",
+          "defTD": "0",
+          "soloTackles": "3",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4360383",
+        "longName": "Kerby Joseph"
+      },
+      "4361529": {
+        "gameID": "20230907_DET@KC",
+        "Rushing": {
+          "rushAvg": "2.9",
+          "rushYds": "23",
+          "carries": "8",
+          "longRush": "7",
+          "rushTD": "0"
+        },
+        "Receiving": {
+          "receptions": "4",
+          "recTD": "0",
+          "longRec": "10",
+          "targets": "4",
+          "recYds": "31",
+          "recAvg": "7.8"
+        },
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "4361529",
+        "longName": "Isiah Pacheco"
+      },
+      "4361662": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "2",
+          "defTD": "0",
+          "soloTackles": "0",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4361662",
+        "longName": "Alim McNeill"
+      },
+      "4361964": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "1",
+          "defTD": "0",
+          "soloTackles": "1",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4361964",
+        "longName": "Chamarri Conner"
+      },
+      "4362117": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "1",
+          "defTD": "0",
+          "soloTackles": "1",
+          "tfl": "1",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4362117",
+        "longName": "Keondre Coburn"
+      },
+      "4362759": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "7",
+          "defTD": "0",
+          "soloTackles": "4",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4362759",
+        "longName": "Nick Bolton"
+      },
+      "4372099": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "4",
+          "defTD": "0",
+          "soloTackles": "3",
+          "tfl": "0",
+          "qbHits": "3",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4372099",
+        "longName": "Aidan Hutchinson"
+      },
+      "4373578": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "5",
+          "defTD": "0",
+          "soloTackles": "5",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4373578",
+        "longName": "Jerry Jacobs"
+      },
+      "4374302": {
+        "gameID": "20230907_DET@KC",
+        "Receiving": {
+          "receptions": "6",
+          "recTD": "1",
+          "longRec": "21",
+          "targets": "9",
+          "recYds": "71",
+          "recAvg": "11.8"
+        },
+        "scoringPlays": [
+          {
+            "score": "Amon-Ra St. Brown 9 Yd pass from Jared Goff (Riley Patterson Kick)",
+            "scorePeriod": "Q1",
+            "homeScore": "0",
+            "awayScore": "7",
+            "teamID": "11",
+            "scoreDetails": "14 plays, 91 yards, 8:04",
+            "scoreType": "TD",
+            "scoreTime": "2:46",
+            "team": "DET",
+            "playerIDs": [
+              "3046779",
+              "4374302",
+              "4243371"
+            ]
+          }
+        ],
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "playerID": "4374302",
+        "longName": "Amon-Ra St. Brown"
+      },
+      "4411771": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "2",
+          "defTD": "0",
+          "soloTackles": "1",
+          "tfl": "0",
+          "qbHits": "1",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4411771",
+        "longName": "John Cominsky"
+      },
+      "4426405": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "8",
+          "defTD": "0",
+          "soloTackles": "6",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4426405",
+        "longName": "Trent McDuffie"
+      },
+      "4426659": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "7",
+          "defTD": "0",
+          "soloTackles": "3",
+          "tfl": "1",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "1"
+        },
+        "playerID": "4426659",
+        "longName": "George Karlaftis"
+      },
+      "4426901": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "6",
+          "defTD": "0",
+          "soloTackles": "3",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4426901",
+        "longName": "Leo Chenal"
+      },
+      "4428331": {
+        "gameID": "20230907_DET@KC",
+        "Rushing": {
+          "rushAvg": "-3.0",
+          "rushYds": "-3",
+          "carries": "1",
+          "longRush": "-3",
+          "rushTD": "0"
+        },
+        "Receiving": {
+          "receptions": "3",
+          "recTD": "1",
+          "longRec": "25",
+          "targets": "5",
+          "recYds": "29",
+          "recAvg": "9.7"
+        },
+        "scoringPlays": [
+          {
+            "score": "Rashee Rice 1 Yd pass from Patrick Mahomes (Harrison Butker Kick)",
+            "scorePeriod": "Q2",
+            "homeScore": "7",
+            "awayScore": "7",
+            "teamID": "16",
+            "scoreDetails": "13 plays, 75 yards, 5:56",
+            "scoreType": "TD",
+            "scoreTime": "11:50",
+            "team": "KC",
+            "playerIDs": [
+              "3139477",
+              "4428331",
+              "3055899"
+            ]
+          }
+        ],
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "4428331",
+        "longName": "Rashee Rice"
+      },
+      "4429795": {
+        "gameID": "20230907_DET@KC",
+        "Rushing": {
+          "rushAvg": "6.0",
+          "rushYds": "42",
+          "carries": "7",
+          "longRush": "18",
+          "rushTD": "0"
+        },
+        "Receiving": {
+          "receptions": "2",
+          "recTD": "0",
+          "longRec": "10",
+          "targets": "2",
+          "recYds": "18",
+          "recAvg": "9.0"
+        },
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "playerID": "4429795",
+        "longName": "Jahmyr Gibbs"
+      },
+      "4430027": {
+        "gameID": "20230907_DET@KC",
+        "Receiving": {
+          "receptions": "5",
+          "recTD": "0",
+          "longRec": "14",
+          "targets": "5",
+          "recYds": "39",
+          "recAvg": "7.8"
+        },
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "playerID": "4430027",
+        "longName": "Sam LaPorta"
+      },
+      "4430191": {
+        "gameID": "20230907_DET@KC",
+        "Rushing": {
+          "rushAvg": "4.0",
+          "rushYds": "4",
+          "carries": "1",
+          "longRush": "4",
+          "rushTD": "0"
+        },
+        "Receiving": {
+          "receptions": "0",
+          "recTD": "0",
+          "longRec": "0",
+          "targets": "3",
+          "recYds": "0",
+          "recAvg": "0.0"
+        },
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "playerID": "4430191",
+        "longName": "Skyy Moore"
+      },
+      "4569465": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "2",
+          "defTD": "0",
+          "soloTackles": "1",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "1"
+        },
+        "playerID": "4569465",
+        "longName": "Jack Campbell"
+      },
+      "4612387": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "2",
+          "defTD": "0",
+          "soloTackles": "2",
+          "tfl": "0",
+          "qbHits": "2",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4612387",
+        "longName": "Felix Anudike-Uzomah"
+      },
+      "4692025": {
+        "gameID": "20230907_DET@KC",
+        "scoringPlays": [
+          {
+            "score": "Brian Branch 50 Yd Interception Return (Riley Patterson Kick)",
+            "scorePeriod": "Q3",
+            "homeScore": "14",
+            "awayScore": "14",
+            "teamID": "11",
+            "scoreDetails": "3 plays, 4 yards, 0:50",
+            "scoreType": "TD",
+            "scoreTime": "10:54",
+            "team": "DET",
+            "playerIDs": [
+              "4692025",
+              "4243371"
+            ]
+          }
+        ],
+        "teamID": "11",
+        "team": "DET",
+        "teamAbv": "DET",
+        "Defense": {
+          "totalTackles": "3",
+          "defTD": "1",
+          "soloTackles": "2",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "1",
+          "defensiveInterceptionsYards": "50",
+          "interceptionTDs": "1",
+          "sacks": "0",
+          "passDeflections": "1"
+        },
+        "playerID": "4692025",
+        "longName": "Brian Branch"
+      },
+      "4917635": {
+        "gameID": "20230907_DET@KC",
+        "teamID": "16",
+        "team": "KC",
+        "teamAbv": "KC",
+        "Defense": {
+          "totalTackles": "2",
+          "defTD": "0",
+          "soloTackles": "2",
+          "tfl": "0",
+          "qbHits": "0",
+          "defensiveInterceptions": "0",
+          "sacks": "0",
+          "passDeflections": "0"
+        },
+        "playerID": "4917635",
+        "longName": "Joshua Williams"
+      }
+    },
+    "arenaCapacity": "73,426",
+    "arena": "GEHA Field at Arrowhead Stadium",
+    "homePts": "20",
+    "awayResult": "W",
+    "teamIDAway": "11",
+    "Referees": "Allen Baynes, John Hussey, Carl Johnson, Carl Paganelli, Matt Edwards, Anthony Flemming, Frank LeBlanc",
+    "gameClock": "",
+    "awayPts": "21",
+    "gameID": "20230907_DET@KC",
+    "seasonType": "Regular Season"
   }
+}
