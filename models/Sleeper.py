@@ -51,10 +51,9 @@ class SleeperAPI():
     def getPlayers(self, sport = 'nfl'):
         if self.json_server:
             request = requests.get("http://localhost:3000/db")
-            return request.json()
         else: 
             request = requests.get(f"{self.host}/players/{sport}")
-            return request.json()
+        return request.json()
     
     def generateNflPlayerFile(self):
         today = date.today()
@@ -69,36 +68,22 @@ class SleeperAPI():
 
 class SleeperImporter:
     player_positions = ['QB', 'RB', 'WR', 'TE']
-
-    def __init__(self):
-        pass
-
-    def setupTables(self):
-        db = Database()
-        args = []
-
-        # league table
-        sql = """CREATE TABLE IF NOT EXISTS leagues(
+    tables = {}
+    tables['leagues'] = """CREATE TABLE leagues(
             league_id VARCHAR(50) PRIMARY KEY,
             season YEAR(4),
             name VARCHAR(100),
             sport VARCHAR(50) DEFAULT 'nfl',
             platform VARCHAR(50) DEFAULT 'sleeper'
-        );"""        
-        cursor = db.query(sql, args)
-
-        # managers table
-        sql = """CREATE TABLE IF NOT EXISTS managers(
+        );"""
+    tables['managers'] = """CREATE TABLE managers(
             user_id VARCHAR(50),
             league_id VARCHAR(50),
             display_name VARCHAR(50),
             team_name VARCHAR(100),
             PRIMARY KEY (league_id, user_id)
-        );"""
-        cursor = db.query(sql, args)
-
-        # # rosters table
-        sql = """CREATE TABLE IF NOT EXISTS rosters(
+        );""" 
+    tables['rosters'] = """CREATE TABLE rosters(
             manager_id VARCHAR(50),
             league_id VARCHAR(50),
             roster_id INT,
@@ -106,22 +91,28 @@ class SleeperImporter:
             players VARCHAR(1000),
             PRIMARY KEY (league_id, manager_id)
         );"""
-        cursor = db.query(sql, args)
-        
-        # # nfl players table
-        sql = """CREATE TABLE IF NOT EXISTS players(
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            player_id VARCHAR(20),
+    tables['players'] = """CREATE TABLE players(
+            sleeper_id VARCHAR(10) PRIMARY KEY,
+            espn_id VARCHAR(10),
+            yahoo_id VARCHAR(10),
+            nfl_id VARCHAR(10),
+            fantasypros_id VARCHAR(10),
+            fantasy_data_id VARCHAR(10), 
             position VARCHAR(10),
             team VARCHAR(5),
             first_name VARCHAR(20),
             last_name VARCHAR(30),
-            full_name VARCHAR(50),
-            fantasy_data_id VARCHAR(10),
-            espn_id VARCHAR(10),
-            yahoo_id VARCHAR(10)
+            full_name VARCHAR(50)
         );"""
-        cursor = db.query(sql, args)
+
+    def __init__(self):
+        pass
+
+    def setupTables(self):
+        db = Database()
+        for table_name in self.tables:
+            db.createTable(table_name, self.tables[table_name])
+
 
     def importLeague(self, league_id = None):
         sleeper = SleeperAPI()
@@ -204,10 +195,20 @@ class SleeperImporter:
                     player["espn_id"]           if "espn_id" in player else "",
                     player["yahoo_id"]          if "yahoo_id" in player else ""
                 ))
+            # sleeper_id VARCHAR(10),
+            # espn_id VARCHAR(10),
+            # yahoo_id VARCHAR(10),
+            # nfl_id VARCHAR(10),
+            # fantasypros_id VARCHAR(10),
+            # position VARCHAR(10),
+            # team VARCHAR(5),
+            # first_name VARCHAR(20),
+            # last_name VARCHAR(30),
+            # full_name VARCHAR(50)                
 
         # # NFL Players INSERT
         sql = """INSERT INTO players
-            (player_id, position, team, first_name, last_name, full_name, fantasy_data_id, espn_id, yahoo_id)
+            (id, sleeper_id, position, team, first_name, last_name, full_name, fantasy_data_id, espn_id, yahoo_id)
             VALUES
             (%s, %s, %s, %s, %s, %s, %s, %s, %s)
             ;"""

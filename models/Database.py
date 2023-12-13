@@ -1,5 +1,6 @@
 import os
-from mysql.connector import connect, Error
+import json
+from mysql.connector import connect, Error, errorcode
 from dotenv import load_dotenv, find_dotenv
 
 loaded = load_dotenv(find_dotenv())
@@ -21,10 +22,27 @@ class Database:
             password=self.password,
             database=self.database)
         
-    def query(self, sql, args):
+    def createTable(self, table_name, table_description):
         cursor = self.connection.cursor()
-        cursor.execute(sql, args)
-        return cursor
+        try:
+            cursor.execute(table_description)
+        except Error as err:
+            if err.errno == errorcode.ER_TABLE_EXISTS_ERROR:
+                print(f"Table already exists: {table_name}")
+            else: 
+                print(f"Error {err.errno}: {err.msg}")
+        else: 
+            print(f"Created table {table_name}")
+
+        
+    def query(self, sql, args):
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute(sql, args)
+            return cursor
+        except Error as err:
+            print(err.msg)
+            return None
     
     def insert(self, sql, args):
         cursor = self.query(sql, args)
@@ -35,12 +53,16 @@ class Database:
 
     # https://dev.mysql.com/doc/connector-python/en/connector-python-api-mysqlcursor-executemany.html
     def insertmany(self, sql, args):
-        cursor = self.connection.cursor()
-        cursor.executemany(sql, args)
-        rowcount = cursor.rowcount
-        self.connection.commit()
-        cursor.close()
-        return rowcount
+        try:
+            cursor = self.connection.cursor()
+            cursor.executemany(sql, args)
+            rowcount = cursor.rowcount
+            self.connection.commit()
+            cursor.close()
+            return rowcount
+        except Error as err:
+            print(err.msg)
+            return None
     
     def update(self, sql, args):
         cursor = self.query(sql, args)
