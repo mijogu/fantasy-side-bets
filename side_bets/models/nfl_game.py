@@ -1,6 +1,6 @@
 from django.db import models
 
-from nfl_team import NFLTeam
+# from nfl_team import NFLTeam
 
 class NFLGame(models.Model):
     # fields
@@ -18,8 +18,18 @@ class NFLGame(models.Model):
     season = models.IntegerField()
 
     #relationships
-    home_team = models.ForeignKey(NFLTeam, related_name='home_games')
-    away_team = models.ForeignKey(NFLTeam, related_name='away_games')
+    home_team = models.ForeignKey(
+        "NFLTeam", 
+        on_delete=models.SET_NULL,
+        null=True, 
+        related_name='home_games'
+    )
+    away_team = models.ForeignKey(
+        "NFLTeam", 
+        on_delete=models.SET_NULL,
+        null=True, 
+        related_name='away_games'
+    )
     # boxscores -> many-to-one relationship from Boxscore
 
     def __str__(self):

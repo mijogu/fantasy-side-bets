@@ -1,8 +1,8 @@
 from django.db import models
 
-from nfl_game import NFLGame
-from nfl_player import NFLPlayer
-from fantasy_team import FantasyTeam
+# from .nfl_game import NFLGame
+# from .nfl_player import NFLPlayer
+# from .fantasy_team import FantasyTeam
 
 class NFLBoxscore(models.Model):
     # rushing fields
@@ -27,9 +27,24 @@ class NFLBoxscore(models.Model):
     fumbles_lost = models.IntegerField()
 
     # relationships
-    player = models.ForeignKey(NFLPlayer, related_name='boxscores')
-    game = models.ForeignKey(NFLGame, related_name='boxscores')
-    fantasy_team = models.ForeignKey(FantasyTeam, related_name='boxscores')
+    player = models.ForeignKey(
+        "NFLPlayer", 
+        on_delete=models.SET_NULL, 
+        null=True,
+        related_name='boxscores'
+    )
+    game = models.ForeignKey(
+        "NFLGame", 
+        on_delete=models.SET_NULL, 
+        null=True,
+        related_name='boxscores'
+    )
+    fantasy_team = models.ForeignKey(
+        "FantasyTeam", 
+        on_delete=models.SET_NULL, 
+        null=True,
+        related_name='boxscores'
+    )
 
     def __str__(self): 
         return self.player.full_name + ' in game ' + self.game.game_id

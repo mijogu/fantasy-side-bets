@@ -1,6 +1,6 @@
 from django.db import models
 
-from nfl_team import NFLTeam
+# from nfl_team import NFLTeam
 
 class NFLPlayer(models.Model):
     #fields
@@ -17,7 +17,12 @@ class NFLPlayer(models.Model):
     position = models.CharField(max_length=10)
 
     #relationships
-    team = models.ForeignKey(NFLTeam, related_name='players')
+    team = models.ForeignKey(
+        "NFLTeam", 
+        on_delete=models.SET_NULL, 
+        related_name='players', 
+        null=True
+    )
     # boxscores => many-to-one from NFLBoxscore
 
     def __str__(self):
