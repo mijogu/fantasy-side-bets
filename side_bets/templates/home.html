@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock title %}
+
+{% block content %}
+    <h1>Welcome</h1>
+
+    {% for mgr in managers %}
+        <p>
+            {{ mgr.first_name }} {{ mgr.last_name }}<br>
+            {{ mgr.email }}<br>
+            {{ mgr.display_name }}<br>
+            {{ mgr.sleeper_id }}
+        </p>
+    {% endfor %}
+{% endblock content %}
