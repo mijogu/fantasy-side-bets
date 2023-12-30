@@ -22,5 +22,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('importer/', include('data_importer.urls')),
     path('', include('side_bets.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
