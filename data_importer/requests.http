@@ -7,6 +7,7 @@
 @username = mijogu
 @userid = 455441209981136896
 @leagueid = 986851253214863360
+@week = 1
 
 ###
 ### Get User
@@ -33,11 +34,11 @@ content-type: application/json
 ###
 ### Get Rosters in League
 ###
-    # owner_id:     "736400840952246272"
-    # league_id:    "986851253214863360"
-    # roster_id:    2
-    # starters:     ["1234"]
-    # players:      ["1234"]
+    # owner_id:             "736400840952246272"
+    # league_id:            "986851253214863360"
+    # roster_id:            2
+    # starters:             ["1232", "3232", ...]
+    # players:              ["1232", "3232", ...]
 GET {{host}}/league/{{leagueid}}/rosters HTTP/1.1
 content-type: application/json
 
@@ -48,6 +49,16 @@ content-type: application/json
     # display_name:         "mijogu"
     # metadata[team_name]:  "Brown DotsOn my Johnston"
 GET {{host}}/league/{{leagueid}}/users HTTP/1.1
+content-type: application/json
+
+###
+### Get Matchups (ie: RosterWeeks)
+###
+    # starters:              ["1232", "3232", ...]
+    # players:               ["1232", "3232", ...]
+    # roster_id:             1
+    # matchup_id:            1
+GET {{host}}/league/{{leagueid}}/matchups/{{week}} HTTP/1.1
 content-type: application/json
 
 ###
