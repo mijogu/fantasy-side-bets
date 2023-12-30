@@ -1,0 +1,42 @@
+{% extends 'import_base.html' %}
+
+{% load utilities %}
+
+{% block title %}
+  {{ league.name }}: Week {{ week }}
+{% endblock %}
+
+{% block content %}
+
+  <div>
+    <h1>{{ league.name }}: Week {{ week }}</h1>
+
+    <p>
+        <a href="{% url "view_league" pk=league.id %}">&larr; {{ league.name }}</a>
+    </p>
+
+    <div>
+      <h2>Rosters</h2>
+      <ul>
+        <li>get rosters and list player #s</li>
+      </ul>
+      {% if rosters %}
+      <ol>
+        {% for roster in rosters %}        
+          <li>
+            <pre>{{ roster.boxscores }}</pre>
+            <ol>
+            {% for boxscore in roster.boxscores %}
+              <li>{{ boxscore }}</li>
+            {% endfor %}
+          </ol>
+          </li>
+        {% endfor %}
+      </ol>  
+      {% else %}
+        <p>No rosters found for this week.</p>
+      {% endif %}
+
+    </div>
+  </div>
+{% endblock %}

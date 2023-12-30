@@ -1,0 +1,44 @@
+{% extends "import_base.html" %}
+
+{% load utilities %}
+
+{% block title %}Fantasy Leagues{% endblock title %}
+
+{% block content %}
+    
+    <div>
+        <h1>Add New League:</h1>
+        <div class="errors">
+        {% if form.errors %}
+            <pre>{{ errors }}</pre>
+        {% else %}
+            No errors.
+        {% endif %}
+        </div>
+        <form method="post" action="{% url "leagues" %}">
+            {% csrf_token %}
+            <div class="form-control">
+                <label for="">League ID</label>
+                {{ form.league_id }}
+            </div>
+            <button class="btn-submit" type="submit">Import league</button>
+        </form>
+    </div>
+
+    {% if new_league %}
+        <h2>Import successful!</h2>
+        <pre>{{ new_league|nice_dump }}</pre>
+    {% endif %}
+
+    <div>
+        <h2>All Leagues:</h2>
+        <ul>
+        {% for league in leagues %}
+            <li>
+                <a href="{% url "view_league" pk=league.pk %}">{{ league }}</a>
+            </li>
+        {% endfor %}
+        </ul>            
+    </div>
+
+{% endblock content %}

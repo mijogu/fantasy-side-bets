@@ -1,0 +1,71 @@
+{% extends 'import_base.html' %}
+
+{% load utilities %}
+
+{% block title %}
+  NFL Games
+{% endblock %}
+
+{% block content %}
+
+  <div>
+    <h1>NFL season 2023</h1>
+
+
+
+    <p>Number of players imported: x</p>
+
+    <p>Weeks of boxscores imported: x</p>
+
+
+
+
+    <form id="league_form" method="post" action="{% url 'view_league' pk=league.pk %}">
+      {% csrf_token %}
+    </form>
+
+    {% if msg %}
+        <div>{{ msg }}</div>
+    {% endif %}
+
+    <pre>{{ league|nice_dump }}</pre>
+    <button name="import_type" form="league_form" class="btn-submit" type="submit" value="delete">Delete league</button>
+    <div>
+      <h2>Teams</h2>
+      {% if league.fantasy_teams %}
+        <ol>
+          {% for team in league.fantasy_teams.all %}
+            <li>{{ team }}</li>
+          {% endfor %}
+        </ol>
+      {% else %}
+        <p>No teams imported yet.</p>
+      {% endif %}
+        {% if league.are_teams_imported %}
+        <p>
+          <button name="import_type" form="league_form" class="btn-submit" type="submit" value="deleteteams">Delete teams</button>
+        {% else %}
+          <button name="import_type" form="league_form" class="btn-submit" type="submit" value="teams">Import teams</button>
+        </p>
+        {% endif %}
+    </div>
+
+    <div>
+      <h2>Roster weeks</h2>
+      {% if weeks %}
+      <ol>
+        {% for week in weeks %}
+          <li><a href="{% url "league_week" pk=league.id week=week.game_week %}">Week {{ week.game_week }}</a></li>
+        {% endfor %}
+      </ol>  
+      {% else %}
+        <p>No weeks found.</p>
+      {% endif %}
+
+      <p>
+        <input type="text" name="week" form="league_form">
+        <button name="import_type" form="league_form" class="btn-submit" type="submit" value="rosterweeks">Import roster week</button>
+      </p>
+    </div>
+  </div>
+{% endblock %}

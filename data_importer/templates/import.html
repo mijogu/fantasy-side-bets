@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Importer Home{% endblock title %}
+
+{% block content %}
+
+    <h1>{{ msg }}</h1>
+
+    <div>
+        <h2>New item:</h2>
+        {{ data|pprint }}
+    </div>
+
+    <div>
+        <h2>All items:</h2>
+        {% if all.len > 0 %}
+            <ul>
+                {% for obj in all  %}
+                    <li>{{ obj }}</li>
+                {% endfor %}
+            </ul>            
+        {% else %}
+            <p>None of those yet</p>
+        {% endif %}
+    </div>
+
+{% endblock content %}

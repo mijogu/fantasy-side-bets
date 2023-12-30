@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Data Importer{% endblock title %}</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url "leagues" %}">Leagues</a>
+    </nav>
+    {% block content %}Welcome to the Importer{% endblock content %}
+</body>
+</html>
