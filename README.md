@@ -7,7 +7,7 @@ Python apps included:
 
 ## Data Importer 
 
-Imports fantasy football data from Sleeper app (coming soon: ESPN)
+Imports fantasy football data from [Sleeper app](https://docs.sleeper.com/) (coming soon: ESPN)
 
 Imports NFL stats data from [Tank01](https://rapidapi.com/tank01/api/tank01-nfl-live-in-game-real-time-statistics-nfl/) (via RapidAPI)
 
