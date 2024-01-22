@@ -23,8 +23,10 @@ class FantasyTeam(models.Model):
         related_name="fantasy_teams"
     )
 
-    class Meta:
-        unique_together = ('sleeper_user_id', 'league')
-
     def __str__(self):
         return self.league.name + ': ' + self.team_name
+
+    class Meta:
+        unique_together = ('sleeper_user_id', 'league')
+        verbose_name = 'Fantasy Team'
+        verbose_name_plural = 'Fantasy Teams'

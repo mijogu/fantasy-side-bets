@@ -15,14 +15,14 @@ class FantasyRosterWeek(models.Model):
         on_delete=models.DO_NOTHING,
         blank=True,
         null=True,
-        related_name="games"
+        related_name="roster_weeks"
     )
     team = models.ForeignKey(
         "FantasyTeam",
         on_delete=models.DO_NOTHING,
         blank=True,
         null=True,
-        related_name="games",
+        related_name="roster_weeks",
     )
 
     @property
@@ -33,9 +33,10 @@ class FantasyRosterWeek(models.Model):
 
         return starters
 
-    class Meta:
-        unique_together = ('league', 'game_week', 'team')
-
     def __str__(self):
         return f"{self.team.team_name}: week {self.game_week}"
 
+    class Meta:
+        unique_together = ('league', 'game_week', 'team')
+        verbose_name = 'Fantasy Roster Week'
+        verbose_name_plural = 'Fantasy Roster Weeks'

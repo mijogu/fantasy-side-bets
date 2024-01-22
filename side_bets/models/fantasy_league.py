@@ -6,19 +6,30 @@ class FantasyLeague(models.Model):
     # fields 
     league_id = models.CharField(max_length=100, unique=True, blank=True, null=True)
     name = models.CharField(max_length=100)
-    season = models.IntegerField()
     platform = models.CharField(max_length=100, default='sleeper')
     
     are_teams_imported = models.BooleanField(default=False)
     are_users_imported = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
 
+    season = models.ForeignKey(
+        "NFLSeason", 
+        on_delete=models.DO_NOTHING,
+        blank=True, 
+        null=True,
+        related_name='fantasy_leagues'
+    )
+
     # relationships
     # fantasy_teams = many-to-one rel from FantasyTeam
-    # games = many-to-one rel from FantasyRosterWeek
+    # roster_weeks = many-to-one rel from FantasyRosterWeek
     
     def __str__(self):
-        return f"{self.name} {self.season}"
+        return f"{self.name}: {self.season}"
+    
+    class Meta:
+        verbose_name = 'Fantasy League'
+        verbose_name_plural = 'Fantasy Leagues'
     
     def getLeagueWeeksList(self):
         weeks = FantasyRosterWeek.objects \
