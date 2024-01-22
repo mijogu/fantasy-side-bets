@@ -10,7 +10,8 @@ def nice_dump(obj):
     return json.dumps(
         model_to_dict(obj), 
         sort_keys=True, 
-        indent=4
+        indent=4,
+        default=str,
     )
 
 
