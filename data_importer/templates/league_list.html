@@ -7,7 +7,7 @@
 {% block content %}
     
     <div>
-        <h1>Add New League:</h1>
+        <h1>Add New League</h1>
         <div class="errors">
         {% if form.errors %}
             <pre>{{ errors }}</pre>
@@ -15,7 +15,7 @@
             No errors.
         {% endif %}
         </div>
-        <form method="post" action="{% url "leagues" %}">
+        <form method="post" action="{% url "league_list" %}">
             {% csrf_token %}
             <div class="form-control">
                 <label for="">League ID</label>

@@ -2,8 +2,11 @@ from django.shortcuts import render, redirect, get_object_or_404, get_list_or_40
 from django.forms.models import model_to_dict
 
 from .models import SleeperImporter
+from .models import TankStatsImporter
 from .models.forms import ImportFantasyLeagueForm
-from side_bets.models import FantasyLeague, FantasyTeam, FantasyRosterWeek
+from side_bets.models import \
+    FantasyLeague, FantasyTeam, FantasyRosterWeek, \
+    NFLSeason, NFLGame, NFLPlayer
 
 default_league_id = '986851253214863360'
 default_week = 1
@@ -40,7 +43,7 @@ def league(request, pk):
     weeks = league.getLeagueWeeksList()
     return render(request, 'league.html', { 'league': league, 'msg': msg, 'weeks': weeks })
 
-def leagues(request):
+def league_list(request):
     new_league = False
     if request.method == 'POST':
         form = ImportFantasyLeagueForm(request.POST)
@@ -64,9 +67,58 @@ def league_week(request, pk, week):
     # get NFL players
     # get NFL player boxscores
     # link NFL players to rosters
-
     return render(request, 'league_week.html', { 'league': league, 'rosters': rosters, 'week': week })
 
+
+def season_list(request):
+    seasons = NFLSeason.objects.all()
+    return render(request, 'season_list.html', { 'seasons': seasons })
+
+def nfl_player_list(request):
+    filter = None
+    if request.method == 'POST':
+        if request.POST['form_type'] == 'importplayers':
+            players = SleeperImporter.importPlayers()
+            msg = 'Players imported successfully!'
+        elif request.POST['form_type'] == 'deleteplayers':
+            players = NFLPlayer.objects.all()
+            players.delete()
+            msg = "Players deleted!"
+        elif request.POST['form_type'] == 'fix_espn_id':
+            pass
+    elif request.method == 'GET' and "filter" in request.GET:
+        filter = request.GET['filter']
+        if filter == "missing_espn_id":
+            players = NFLPlayer.objects.filter(espn_id__isnull=True)
+        
+    else:
+        players = NFLPlayer.objects.filter(espn_id__isnull=True)
+        msg = ""
+    return render(request, 'nfl_player_list.html', { 'players': players, 'msg': msg, 'filter': filter })
+
+def season(request, pk):
+    season = get_object_or_404(NFLSeason, pk=pk)
+    msg = None
+    if request.method == 'POST':
+        if request.POST['import_type'] == 'nflgames':
+            week = request.POST['week']
+            nflgames = TankStatsImporter.importNFLGames(week=week, season=season)
+            msg = f"{len(nflgames)} NFL Games imported successfully!"
+
+    return render(request, 'season.html', { 'season': season, 'msg': msg })
+
+def nfl_game(request, pk):
+    game = get_object_or_404(NFLGame, pk=pk)
+    msg = None
+    if request.method == 'POST':
+        if request.POST['import_type'] == 'boxscores':
+            boxscores = TankStatsImporter.importBoxScores(game_id=pk)
+            msg = f"{len(boxscores)} NFL Boxscores imported successfully!"
+
+    game.refresh_from_db()
+    return render(request, 'nflgame.html', { 'game': game, 'msg': msg })
+
+    
 
 # def importFantasyLeague(request):
 #     errors = None

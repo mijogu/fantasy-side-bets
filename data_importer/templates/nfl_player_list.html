@@ -1,0 +1,50 @@
+{% extends "import_base.html" %}
+
+{% load utilities %}
+
+{% block title %}NFL Players{% endblock title %}
+
+{% block content %}
+
+    <div>
+        <h2>All NFL Players</h2>
+
+        <form id="player_form" method="post" action="{% url "nfl_player_list" %}">
+            {% csrf_token %}
+        </form>
+
+        {% if msg %}
+            <div>{{ msg }}</div>
+        {% endif %}
+
+        <div>            
+            <p>Players WITH espn_id - default</p>
+            <p>
+                <button form="player_form" type="submit" value="fix_espn_id"> missing espn_id fix_espn_id</button>
+            </p>
+            <p>Players missing posiitions</p>
+            <p>Players missing teams</p>
+        </div>
+
+        {% if players|length %}    
+            <div>
+                <button form="player_form" name="form_type" value="deleteplayers">Delete all NFL Players</button>
+            </div>
+            <ol>
+            {% for player in players %}
+                <li>
+                    <pre>{{ player }}</pre>
+                    {% comment %} <a href="{% url "view_season" pk=season.pk %}">{{ season }}</a> {% endcomment %}
+                </li>
+            {% endfor %}
+            </ol>
+        {% else %}
+            <p>No players imported yet.</p>
+            <div>
+                <button form="player_form" name="form_type" value="importplayers">Import NFL Players</button>
+            </div>
+        {% endif %}
+                  
+    </div>
+
+{% endblock content %}

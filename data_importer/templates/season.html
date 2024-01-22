@@ -1,0 +1,54 @@
+{% extends 'import_base.html' %}
+
+{% load utilities %}
+
+{% block title %}
+  NFL Season
+{% endblock %}
+
+{% block content %}
+
+  <div>
+    <h1>{{ season }}</h1>
+
+    {% if msg %}
+        <div>{{ msg }}</div>
+    {% endif %}
+
+    <pre>{{ season|nice_dump }}</pre>
+    
+    <div>
+      <h2>NFL Games: {{ season.number_of_games }}</h2>
+
+    <form id="season_form" method="post" action="{% url 'view_season' pk=season.pk %}">
+      {% csrf_token %}
+      <input type="text" name="week" form="season_form">
+      <button name="import_type" form="season_form" class="btn-submit" type="submit" value="nflgames">Import games for week</button>
+    </form>
+
+      {% if season.games.all|length %}
+        <ol>
+          {% for game in season.games.all %}
+            <li>
+              <a href="{% url "view_nflgame" pk=game.id %}">{{ game }}</a>
+              {% if not game.are_scores_imported %}
+                <button>Import boxscores</button>
+              {% else %}
+                {{ game.boxscores.all|length }} boxscores imported
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      {% else %}
+        <p>No games imported yet.</p>
+      {% endif %}
+        {% comment %} {% if season.are_teams_imported %}
+        <p>
+          <button name="import_type" form="league_form" class="btn-submit" type="submit" value="deleteteams">Delete teams</button>
+        {% else %}
+          <button name="import_type" form="league_form" class="btn-submit" type="submit" value="teams">Import teams</button>
+        </p>
+        {% endif %} {% endcomment %}
+    </div>
+  </div>
+{% endblock %}

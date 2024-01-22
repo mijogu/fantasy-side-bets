@@ -8,7 +8,10 @@
 </head>
 <body>
     <nav>
-        <a href="{% url "leagues" %}">Leagues</a>
+        <a href="{% url "welcome" %}">Home</a> |
+        <a href="{% url "league_list" %}">Leagues</a> |
+        <a href="{% url "season_list" %}">NFL Seasons</a> |
+        <a href="{% url "nfl_player_list" %}">NFL Players</a> |
     </nav>
     {% block content %}Welcome to the Importer{% endblock content %}
 </body>

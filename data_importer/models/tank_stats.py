@@ -1,12 +1,10 @@
-import os
-import json 
 import requests 
-
+import json 
 from decouple import config
+from datetime import time, datetime
 
-# from dotenv import load_dotenv, find_dotenv
-# from Database import *
-# loaded = load_dotenv(find_dotenv())
+from side_bets.models import \
+    NFLBoxscore, NFLGame, NFLPlayer, NFLTeam
 
 class TankStatsAPI():
     use_json_server = True
@@ -25,8 +23,6 @@ class TankStatsAPI():
             self.url = "http://localhost:3000"
         else:
             self.url = "https://" + self.host
-
-
 
     def getGameBoxScores(self, game_id, fantasy_points = "false"):
         # "twoPointConversions":"2",
@@ -62,186 +58,114 @@ class TankStatsAPI():
         return request.json()
 
 
-class TankStatsImporter():
-    tables = {}
-    tables['games'] = (
-            "CREATE TABLE games( "
-            "game_id VARCHAR(20), "
-            "away_team VARCHAR(5), "
-            "away_score INT, "
-            "away_result CHAR(1), "
-            "home_team VARCHAR(5), "
-            "home_score INT, "
-            "home_result CHAR(1), "
-            "game_date VARCHAR(10), "
-            "game_time VARCHAR(10), "
-            "game_week INT, "
-            "scores_imported BOOLEAN,  "
-            "season INT, "
-            "PRIMARY KEY (game_id) "
-        )
-    tables['boxscores'] = (
-            "CREATE TABLE boxscores( "
-            "player_id VARCHAR(20), "
-            "game_id VARCHAR(20), "
-            "team VARCHAR(5), "
-            "rushing_td INT, "
-            "rushing_yards INT, "
-            "carries INT,  "
-            "passing_td INT,  "
-            "passing_yards INT, "
-            "passing_completions INT,  "
-            "passing_int INT,  "
-            "receiving_td INT,  "
-            "receiving_yards INT, "
-            "receptions INT,  "
-            "targets INT,  "
-            "fumbles INT,  "
-            "fumbles_lost INT,  "
-            "PRIMARY KEY (player_id, game_id)"
-        )
-    
+class TankStatsImporter():    
     def __init__(self):
         pass
 
-    def setupTables(self):
-        db = Database()
-        for table_name in self.tables:
-            db.createTable(table_name, self.tables[table_name])
-
-    # is 'all' working correctly?
-    def importScheduleGames(self, week, season, season_type):
+    # TODO is 'all' working correctly?
+    @staticmethod
+    def importNFLGames(week = None, season = None, season_type = None):
+        if week is None or season is None:
+            return False 
+        
         tankstats = TankStatsAPI()
-        games = tankstats.getScheduleGames()
-        sql = ("INSERT INTO games "
-            "(game_id, away_team, home_team, game_date, game_time, game_week, season) "
-            "VALUES (%s, %s, %s, %s, %s, %s, %s)"
-        )
+        games = tankstats.getScheduleGames(week=week, season=season)
             
-        args = []
+        new_games = []
         for game in games["body"]:
             try:
-                args.append((
-                    game["gameID"],
-                    game["away"],
-                    game["home"],
-                    game["gameDate"],
-                    game["gameTime"],
-                    int(game["gameWeek"]),
-                    int(game["season"]),
+                new_games.append(NFLGame(                    
+                    id = game["gameID"],
+                    away_team_id = NFLTeam.cleanAbbreviation(game["away"]),
+                    home_team_id = NFLTeam.cleanAbbreviation(game["home"]),
+                    date = game["gameDate"],
+                    time = game["gameTime"],
+                    week = int(game["gameWeek"].replace('Week ', '')),
+                    # season = int(game["season"]),
+                    season = season,
                 ))
             except Exception as exception:
-                print(f"{exception} from the following data...")
+                print(f"{exception}")
+                print("...from the following data...")
                 print(json.dumps(game))
-
-        db = Database()
-        imported = db.insertmany(sql, args)
-        print(f"Imported {imported} games")
+        games_imported = NFLGame.objects.bulk_create(new_games) 
+        print(f"Imported {len(games_imported)} games")
+        return games_imported
 
     # game_id required
-    def importBoxScores(self, game_id):
+    @staticmethod
+    def importBoxScores(game_id):
         tankstats = TankStatsAPI()
-        boxscores = tankstats.getGameBoxScores(game_id, "false")
-        sql = ("INSERT INTO boxscores "
-            "(player_id, game_id, team, " 
-            "rushing_td, rushing_yards, carries, "
-            "passing_td, passing_yards, passing_completions, passing_int, "
-            "receiving_td, receiving_yards, receptions, targets, "
-            "fumbles, fumbles_lost) VALUES "
-            "(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
-        )
-            
-        args = []
-        playerStats = boxscores["body"]["playerStats"]
+        game_result = tankstats.getGameBoxScores(game_id=game_id, fantasy_points="false")
+        
+        # playerStats = game_result["body"]["playerStats"]
+        # for playerID in playerStats:
+        #     try:
+        #         plyr = NFLPlayer.objects.get(espn_id=playerID)
+        #         print(playerID)
+        #     except Exception as e:
+        #         print(playerID, e)
+        # exit()
+
+        boxscores = [] 
+        playerStats = game_result["body"]["playerStats"]
         for playerID in playerStats:
             player = playerStats[playerID]
             hasRelevantStats = False
             try:
-                newbox = [
-                    player["playerID"],
-                    player["gameID"],
-                    player["team"],
-                ]
-
+                newboxscore = NFLBoxscore(
+                    player_id=player["playerID"],
+                    game_id=player["gameID"],
+                )
                 if "Rushing" in player:
-                    # print("has Rushing stats")
-                    hasRelevantStats = True
-                    newbox.extend([
-                        int(player["Rushing"]["rushTD"]),
-                        int(player["Rushing"]["rushYds"]),
-                        int(player["Rushing"]["carries"])
-                    ])
-                else: 
-                    newbox.extend([0, 0, 0])
-
+                    hasRelevantStats = True                    
+                    newboxscore.rush_tds=int(player["Rushing"]["rushTD"])
+                    newboxscore.rush_yards=int(player["Rushing"]["rushYds"])
+                    newboxscore.carries=int(player["Rushing"]["carries"])
+                # else: 
+                #     newboxscore.extend([0, 0, 0])
                 if "Passing" in player:
-                    # print("has Passing stats")
                     hasRelevantStats = True
-                    newbox.extend([
-                        int(player["Passing"]["passTD"]),
-                        int(player["Passing"]["passYds"]),
-                        int(player["Passing"]["passCompletions"]),
-                        int(player["Passing"]["int"])
-                    ])
-                else: 
-                    newbox.extend([0, 0, 0, 0])
-
+                    newboxscore.passing_tds=int(player["Passing"]["passTD"])
+                    newboxscore.passing_yards=int(player["Passing"]["passYds"])
+                    newboxscore.passing_completions=int(player["Passing"]["passCompletions"])
+                    newboxscore.passing_ints=int(player["Passing"]["int"])
+                # else: 
+                #     newboxscore.extend([0, 0, 0, 0])
                 if "Receiving" in player:
-                    # print("has Receving stats")
                     hasRelevantStats = True
-                    newbox.extend([
-                        int(player["Receiving"]["recTD"]),
-                        int(player["Receiving"]["recYds"]),
-                        int(player["Receiving"]["receptions"]),
-                        int(player["Receiving"]["targets"])
-                    ])
-                else:
-                    newbox.extend([0, 0, 0, 0])
-
+                    newboxscore.receiving_tds=int(player["Receiving"]["recTD"])
+                    newboxscore.receiving_yards=int(player["Receiving"]["recYds"])
+                    newboxscore.receptions=int(player["Receiving"]["receptions"])
+                    newboxscore.targets=int(player["Receiving"]["targets"])
+                # else:
+                #     newboxscore.extend([0, 0, 0, 0])
                 if "Defense" in player:
-                    # print("has Defense stats")
-                    newbox.extend([         
-                        int(player["Defense"]["fumbles"]) if "fumbles" in player["Defense"] else 0,
-                        int(player["Defense"]["fumblesLost"]) if "fumblesLost" in player["Defense"] else 0
-                    ])
-                else: 
-                    newbox.extend([0, 0])
-
+                    newboxscore.fumbles=int(player["Defense"]["fumbles"]) if "fumbles" in player["Defense"] else 0
+                    newboxscore.fumbles_lost=int(player["Defense"]["fumblesLost"]) if "fumblesLost" in player["Defense"] else 0
+                # else: 
+                #     newboxscore.extend([0, 0])
                 if hasRelevantStats:
-                    args.append(newbox)
-                # print(json.dump(newbox))
+                    boxscores.append(newboxscore)
+
             except KeyError as error:
                 print(f"Key error for '{error}'")
             except Exception as exception:
-                print(f"{exception} from the following data...")
+                print(f"{exception}")
+                print("...from the following data...")
                 print(json.dumps(player))
 
-        db = Database()
-        imported = db.insertmany(sql, args)
-        if imported:
-            print(f"Imported {imported} boxscores")
-        else: 
-            print("Something went wrong.")
-            
-        self.updateGameResult(boxscores["body"])
+        boxscores_imported = NFLBoxscore.objects.bulk_create(boxscores) 
+        
+        # TODO confirm this works
+        fields_updated = NFLGame.objects.filter(id=game_id).update(
+            away_score=game_result['awayPts'],
+            away_result=game_result['awayResult'],
+            home_score=game_result['homePts'],
+            home_result=game_result['homeResult'],
+            scores_imported=True,
+        )
 
-    def updateGameResult(self, game_data):
-        sql = ("UPDATE games SET " 
-            "away_score = %s, "
-            "away_result = %s, "
-            "home_score = %s, "
-            "home_result = %s, "
-            "scores_imported = 1 "
-            "WHERE game_id = %s")
-            
-        args = [
-            int(game_data["awayPts"]),
-            game_data["awayResult"],
-            int(game_data["homePts"]),
-            game_data["homeResult"],
-            game_data["gameID"]
-        ]
-        db = Database()
-        rowcount = db.update(sql, args)
-        print(f"Updated {rowcount} row(s) where game_id = {game_data['gameID']}")
+        print(f"Imported {len(boxscores_imported)} boxscores")
+        print(f"Updated {fields_updated} NFLGame fields")
 

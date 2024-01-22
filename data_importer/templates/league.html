@@ -23,7 +23,7 @@
     <button name="import_type" form="league_form" class="btn-submit" type="submit" value="delete">Delete league</button>
     <div>
       <h2>Teams</h2>
-      {% if league.fantasy_teams %}
+      {% if league.fantasy_teams.all|length %}
         <ol>
           {% for team in league.fantasy_teams.all %}
             <li>{{ team }}</li>
@@ -43,10 +43,10 @@
 
     <div>
       <h2>Roster weeks</h2>
-      {% if weeks %}
+      {% if league.roster_weeks.all|length %}
       <ol>
-        {% for week in weeks %}
-          <li><a href="{% url "league_week" pk=league.id week=week.game_week %}">Week {{ week.game_week }}</a></li>
+        {% for week in league.roster_weeks.all %}
+          <li><a href="{% url "league_week" pk=league.id week=week.game_week %}">{{ week }}</a></li>
         {% endfor %}
       </ol>  
       {% else %}

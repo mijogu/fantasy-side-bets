@@ -1,0 +1,20 @@
+{% extends "import_base.html" %}
+
+{% load utilities %}
+
+{% block title %}NFL Seasons{% endblock title %}
+
+{% block content %}
+
+    <div>
+        <h2>All NFL Seasons:</h2>
+        <ul>
+        {% for season in seasons %}
+            <li>
+                <a href="{% url "view_season" pk=season.pk %}">{{ season }}</a>
+            </li>
+        {% endfor %}
+        </ul>            
+    </div>
+
+{% endblock content %}

@@ -2,13 +2,14 @@ import requests
 import json 
 from datetime import date
 
-from side_bets.models import FantasyLeague, FantasyTeam, FantasyRosterWeek, NFLPlayer
+from side_bets.models import \
+    FantasyLeague, FantasyTeam, FantasyRosterWeek, \
+    NFLPlayer, NFLTeam
 
 class SleeperAPI:
-    json_server = False
+    use_json_server = True
     to_csv = False
 
-    host = 'https://api.sleeper.app/v1'
     username = 'mijogu'
     user_id = '455441209981136896'
     league_id = '986851253214863360'
@@ -16,7 +17,10 @@ class SleeperAPI:
     week = '1'
     
     def __init__(self):
-        pass 
+        if self.use_json_server:
+            self.host = "http://localhost:3000"
+        else:
+            self.host = 'https://api.sleeper.app/v1'
     
     def getUser(self, user_id = None):
         if user_id is None:
@@ -162,42 +166,71 @@ class SleeperImporter:
 
     @staticmethod
     def importPlayers():
-        player_positions = ['QB', 'RB', 'WR', 'TE']
+        # player_positions = ['QB', 'RB', 'WR', 'TE']
+        ignore_positions = ['DEF']
+        ignore_players = []
+        teams = NFLTeam.objects.values_list('id', flat=True)
+
         sleeper = SleeperAPI()
         players = sleeper.getPlayers()
-        args = []
+        new_players = []
         for key in players:
             player = players[key]
-            if player["position"] in player_positions and player["team"] is not None:
-                args.append((
-                    player["player_id"]         if "player_id" in player else "",
-                    player["position"]          if "position" in player else "",
-                    player["team"]              if "team" in player else "",
-                    player["first_name"]        if "first_name" in player else "",
-                    player["last_name"]         if "last_name" in player else "",
-                    player["full_name"]         if "full_name" in player else "",
-                    player["fantasy_data_id"]   if "fantasy_data_id" in player else "",
-                    player["espn_id"]           if "espn_id" in player else "",
-                    player["yahoo_id"]          if "yahoo_id" in player else ""
-                ))
-            # sleeper_id VARCHAR(10),
-            # espn_id VARCHAR(10),
-            # yahoo_id VARCHAR(10),
-            # nfl_id VARCHAR(10),
-            # fantasypros_id VARCHAR(10),
-            # position VARCHAR(10),
-            # team VARCHAR(5),
-            # first_name VARCHAR(20),
-            # last_name VARCHAR(30),
-            # full_name VARCHAR(50)                
 
-        # # NFL Players INSERT
-        sql = """INSERT INTO players
-            (id, sleeper_id, position, team, first_name, last_name, full_name, fantasy_data_id, espn_id, yahoo_id)
-            VALUES
-            (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-            ;"""
-        db = Database()
-        imported = db.insertmany(sql, args)
-        print(f"Imported {imported} rosters")
+            # if player["team"] not in teams and \
+            #     player["team"] != None:
+            #     new_players.append([
+            #         player["team"],
+            #         player["player_id"],
+            #         player["position"],
+            #         player["full_name"],
+            #     ])
+            # continue
+
+            if player["position"] in ignore_positions or \
+                player["player_id"] in ignore_players or \
+                player["full_name"] == "Duplicate Player" or \
+                player["full_name"] == "Player Invalid":
+                continue
+
+            # if player["position"] in player_positions and \
+            # if "search_full_name" in player and player["search_full_name"] != "duplicateplayer":
+            try:
+                new_players.append(NFLPlayer(
+                    sleeper_id = player["player_id"], 
+                    espn_id = player["espn_id"], 
+                    # TODO store these values later, yahoo_id was a problem
+                    # yahoo_id = player["yahoo_id"], 
+                    # fantasy_data_id = player["fantasy_data_id"], 
+                    # rotowire_id = player["rotowire_id"], 
+                    # rotoworld_id = player["rotoworld_id"], 
+                    # swish_id = player["swish_id"], 
+                    number = player["number"], 
+                    first_name = player["first_name"], 
+                    last_name = player["last_name"], 
+                    full_name = player["full_name"], 
+                    position = player["position"], 
+                    team_id = NFLTeam.cleanAbbreviation(player["team"]), 
+                    # player["player_id"]         if "player_id" in player else "",
+                    # player["position"]          if "position" in player else "",
+                    # player["team"]              if "team" in player else "",
+                    # player["first_name"]        if "first_name" in player else "",
+                    # player["last_name"]         if "last_name" in player else "",
+                    # player["full_name"]         if "full_name" in player else "",
+                    # player["fantasy_data_id"]   if "fantasy_data_id" in player else "",
+                    # player["espn_id"]           if "espn_id" in player else "",
+                    # player["yahoo_id"]          if "yahoo_id" in player else ""
+                ))  
+            except Exception as exception:
+                print(f"{exception}")
+                print("...from the following data...")
+                print(json.dumps(player))
+
+        # return new_players
+    
+        print(f"Attempting to create {len(new_players)} NFL players")
+        players_imported = NFLPlayer.objects.bulk_create(new_players, 400)
+        print(f"Imported {len(players_imported)} NFL players")
+        return players_imported
+        
         
