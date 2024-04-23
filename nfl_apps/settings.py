@@ -40,7 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'side_bets',
     'data_importer',
+    'graphene_django',
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'data_importer.schema.schema'
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
