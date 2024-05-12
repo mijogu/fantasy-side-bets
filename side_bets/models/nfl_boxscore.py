@@ -29,7 +29,7 @@ class NFLBoxscore(models.Model):
     # relationships
     game = models.ForeignKey(
         "NFLGame", 
-        on_delete=models.SET_NULL, 
+        on_delete=models.CASCADE, 
         null=True,
         related_name='boxscores',
         db_index=False,

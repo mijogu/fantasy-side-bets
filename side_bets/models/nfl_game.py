@@ -15,21 +15,21 @@ class NFLGame(models.Model):
     #relationships
     home_team = models.ForeignKey(
         "NFLTeam", 
-        on_delete=models.SET_NULL,
+        on_delete=models.CASCADE,
         blank=True,
         null=True, 
         related_name='home_games'
     )
     away_team = models.ForeignKey(
         "NFLTeam", 
-        on_delete=models.SET_NULL,
+        on_delete=models.CASCADE,
         blank=True,
         null=True, 
         related_name='away_games'
     )
     season = models.ForeignKey(
         "NFLSeason",
-        on_delete=models.DO_NOTHING, 
+        on_delete=models.CASCADE, 
         blank=True, 
         null=True,
         related_name='games'
@@ -38,7 +38,7 @@ class NFLGame(models.Model):
     # boxscores -> many-to-one relationship from Boxscore
 
     def __str__(self):
-        return self.id
+        return f"Week {self.week}: {self.id}"
     
     class Meta: 
         verbose_name = 'NFL Game'

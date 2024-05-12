@@ -12,14 +12,14 @@ class FantasyRosterWeek(models.Model):
     # relationships
     league = models.ForeignKey(
         "FantasyLeague",
-        on_delete=models.DO_NOTHING,
+        on_delete=models.CASCADE,
         blank=True,
         null=True,
         related_name="roster_weeks"
     )
     team = models.ForeignKey(
         "FantasyTeam",
-        on_delete=models.DO_NOTHING,
+        on_delete=models.CASCADE,
         blank=True,
         null=True,
         related_name="roster_weeks",
