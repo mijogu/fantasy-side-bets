@@ -3,8 +3,9 @@ from .nfl_game import NFLGame
 
 
 class NFLSeason(models.Model):
+    id = models.IntegerField(primary_key=True)
     reg_season_weeks = 18
-    year = models.CharField(max_length=4, blank=True, null=True)
+    # year = models.CharField(max_length=4, blank=True, null=True)
     are_games_imported = models.BooleanField(default=False)
 
     # games = many-to-one from NFLGame
@@ -15,7 +16,7 @@ class NFLSeason(models.Model):
         return NFLGame.objects.filter(season=self).count()
 
     def __str__(self):
-        return f"{self.year} NFL Season"
+        return f"{self.id} NFL Season"
     
     def getGameIDs(self):
         pass

@@ -22,6 +22,7 @@
 
     <form id="season_form" method="post" action="{% url 'view_season' pk=season.pk %}">
       {% csrf_token %}
+      <input type="hidden" name="season" form="season_form" value="{{ season.id }}">
       <input type="text" name="week" form="season_form">
       <button name="import_type" form="season_form" class="btn-submit" type="submit" value="nflgames">Import games for week</button>
     </form>

@@ -27,7 +27,7 @@ class ImportFantasyLeagueForm(forms.ModelForm):
         
         # add missing fields
         instance.name = league['name']
-        instance.season = league['season']
+        instance.season_id = league['season']
 
         # save and commit
         instance.save()

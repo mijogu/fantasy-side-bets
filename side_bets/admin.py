@@ -29,13 +29,13 @@ from .models import NFLBoxscore
 
 
 class NFLSeasonAdmin(admin.ModelAdmin):
-    list_display = ( "id", "year", "are_games_imported", "number_of_games")
+    list_display = ( "id", "are_games_imported", "number_of_games")
     list_filter = ("are_games_imported",)
 
 class NFLGameAdmin(admin.ModelAdmin):
     list_display = ('id', 'season',)
-    list_filter = ('season__year',)
-    search_fields = ("season__year",)
+    list_filter = ('season__id',)
+    search_fields = ("season__id",)
 
 admin.site.register(FantasyLeague)
 admin.site.register(FantasyTeam)

@@ -1,6 +1,7 @@
 import requests
 import json 
 from datetime import date
+from cleantext import clean
 
 from side_bets.models import \
     FantasyLeague, FantasyTeam, FantasyRosterWeek, \
@@ -92,7 +93,7 @@ class SleeperImporter:
         new_league = FantasyLeague(
             league_id = sleeper_league['league_id'],
             name = sleeper_league['name'],
-            season = sleeper_league['season']
+            season_id = sleeper_league['season']
         )
         new_league.save()
         print(f"Imported league id: {new_league.league_id}")
@@ -117,10 +118,12 @@ class SleeperImporter:
         teams = []
         for user in sleeper_users:
             display = user.get("display_name", user["user_id"])
+            team_name = user.get("metadata", {}).get("team_name", f"Team {display}")
             teams.append(FantasyTeam(
                 sleeper_user_id = user.get("user_id"),
                 display_name = display,
-                team_name = user.get("metadata", {}).get("team_name", f"Team {display}"),
+                # team_name = user.get("metadata", {}).get("team_name", f"Team {display}"),
+                team_name = clean(team_name, no_emoji=True),
                 roster_id = roster_ids[user["user_id"]],
                 league = league
             ))
