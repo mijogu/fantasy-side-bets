@@ -2,6 +2,7 @@ import requests
 import json 
 from datetime import date
 from cleantext import clean
+from pathlib import Path
 
 from side_bets.models import \
     FantasyLeague, FantasyTeam, FantasyRosterWeek, \
@@ -61,24 +62,27 @@ class SleeperAPI:
         return request.json()
     
     def getPlayers(self, sport = 'nfl'):
-        if self.json_server:
+        if self.use_json_server:
             request = requests.get("http://localhost:3000/db")
         else: 
             request = requests.get(f"{self.host}/players/{sport}")
         return request.json()
     
-    def generateNflPlayerFile(self):
-        today = date.today()
-        filename = f"nfl-players-{today.month}-{today.day}-{today.year}.json"
+    # def pullPlayerData(self):
+    #     today = date.today()
+    #     filename = f"nfl-players-{today.month}-{today.day}-{today.year}.json"
 
-        data = self.getNflPlayers()
-        json_object = json.dumps(data, indent=4)
+    #     data = self.getNflPlayers()
+    #     json_object = json.dumps(data, indent=4)
 
-        with open(filename, "w") as outfile:
-            outfile.write(json_object)
+    #     with open(filename, "w") as outfile:
+    #         outfile.write(json_object)
 
 
 class SleeperImporter:
+    path = Path(__file__).parent.parent
+    playerfiles = path / 'playerfiles'
+
     def __init__(self):
         pass
 
@@ -171,6 +175,32 @@ class SleeperImporter:
     def importLeagueMatchups(league_id = None, week = None):
         pass
 
+    staticmethod
+    def pullPlayerData():
+        print('Pulling Sleeper player data')
+        today = date.today()
+
+        filename = f"sleeper-players-{today.month}-{today.day}-{today.year}.json"
+        filepath = SleeperImporter.playerfiles / filename
+        msg = None
+
+        # check if file exists
+        if filepath.exists:
+            data = []
+            msg = f"{filename} already exists - nothing done."
+        else: 
+            sleeper = SleeperAPI()
+            data = sleeper.getPlayers()
+            json_object = json.dumps(data, indent=4)
+            with open(filepath, "w") as outfile:
+                outfile.write(json_object)
+            
+        return {
+            'data': data, 
+            'filename': filename,
+            'msg': msg
+        }
+
     @staticmethod
     def importPlayers():
         # player_positions = ['QB', 'RB', 'WR', 'TE']
@@ -183,16 +213,6 @@ class SleeperImporter:
         new_players = []
         for key in players:
             player = players[key]
-
-            # if player["team"] not in teams and \
-            #     player["team"] != None:
-            #     new_players.append([
-            #         player["team"],
-            #         player["player_id"],
-            #         player["position"],
-            #         player["full_name"],
-            #     ])
-            # continue
 
             if player["position"] in ignore_positions or \
                 player["player_id"] in ignore_players or \

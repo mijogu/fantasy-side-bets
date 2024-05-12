@@ -77,24 +77,34 @@ def season_list(request):
 
 def nfl_player_list(request):
     filter = None
+    msg = ""
     if request.method == 'POST':
         if request.POST['form_type'] == 'importplayers':
-            players = SleeperImporter.importPlayers()
+            players = SleeperImporter.importPlayers() # TODO fix after refactoring import process
             msg = 'Players imported successfully!'
         elif request.POST['form_type'] == 'deleteplayers':
             players = NFLPlayer.objects.all()
             players.delete()
             msg = "Players deleted!"
         elif request.POST['form_type'] == 'fix_espn_id':
-            pass
-    elif request.method == 'GET' and "filter" in request.GET:
-        filter = request.GET['filter']
-        if filter == "missing_espn_id":
-            players = NFLPlayer.objects.filter(espn_id__isnull=True)
+            msg = "DRY RUN: fixed espn IDs"
+        elif request.POST['form_type'] == "sleeper_player_import":
+            import_data = SleeperImporter.pullPlayerData()
+            if import_data['msg'] != None:
+                msg = import_data['msg']
+            else:
+                msg = f"{len(import_data['data'])} sleeper players imported into {import_data['filename']}"
+        elif request.POST['form_type'] == "tankstats_player_import":
+            msg = "DRY RUN: tankstats players imported"
+    # elif request.method == 'GET' and "filter" in request.GET:
+    #     filter = request.GET['filter']
+    #     if filter == "missing_espn_id":
+    #         players = NFLPlayer.objects.filter(espn_id__isnull=True)
         
-    else:
-        players = NFLPlayer.objects.filter(espn_id__isnull=True)
-        msg = ""
+    # get list of Sleeper Player files
+    # get list of TankStats Player files
+
+    players = NFLPlayer.objects.filter(espn_id__isnull=True)
     return render(request, 'nfl_player_list.html', { 'players': players, 'msg': msg, 'filter': filter })
 
 def season(request, pk):

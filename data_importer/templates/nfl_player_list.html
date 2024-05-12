@@ -14,8 +14,16 @@
         </form>
 
         {% if msg %}
-            <div>{{ msg }}</div>
+            <div style=""><p style="padding: 20px; background-color: lightyellow;">{{ msg }}</p></div>
         {% endif %}
+
+        <div>
+            <button form="player_form" name="form_type" value="sleeper_player_import">Pull Sleeper Player data</button>
+            <p>List Sleeper Player files - with Sync buttons</p>
+
+            <button form="player_form" name="form_type" value="tankstats_player_import">Pull TankStats Player data</button>
+            <p>List TankStats Player files - with Sync buttons</p>
+        </div>
 
         <div>            
             <p>Players WITH espn_id - default</p>
