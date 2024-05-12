@@ -98,14 +98,14 @@ def nfl_player_list(request):
     return render(request, 'nfl_player_list.html', { 'players': players, 'msg': msg, 'filter': filter })
 
 def season(request, pk):
-    season = get_object_or_404(NFLSeason, pk=pk)
     msg = None
     if request.method == 'POST':
         if request.POST['import_type'] == 'nflgames':
             week = request.POST['week']
+            season = request.POST['season']
             nflgames = TankStatsImporter.importNFLGames(week=week, season=season)
             msg = f"{len(nflgames)} NFL Games imported successfully!"
-
+    season = get_object_or_404(NFLSeason, pk=pk)
     return render(request, 'season.html', { 'season': season, 'msg': msg })
 
 def nfl_game(request, pk):
