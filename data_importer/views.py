@@ -27,7 +27,7 @@ def league(request, pk):
             msg = 'Teams imported successfully!'
         elif request.POST['import_type'] == 'rosterweeks' and request.POST['week'] != '':
             roster_weeks = SleeperImporter.importRostersForWeek(league_id=league.league_id, week=request.POST['week'])
-            msg = 'Roster weeks imported!'
+            msg = f'{len(roster_weeks)} Roster weeks imported!'
             pass    
         elif request.POST['import_type'] == 'delete':
             league.delete()
