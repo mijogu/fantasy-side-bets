@@ -50,7 +50,8 @@ def league_list(request):
         if form.is_valid():
             new_league = form.save()
     else:
-        form = ImportFantasyLeagueForm(initial={ 'league_id': '986851253214863360'})
+        # form = ImportFantasyLeagueForm(initial={ 'league_id': '986851253214863360'})
+        form = ImportFantasyLeagueForm(initial={ 'league_id': '1005144379184582656'})
 
     leagues = FantasyLeague.objects.all()
     return render(request, 'league_list.html', { 'leagues': leagues, 'new_league': new_league, 'form': form })
