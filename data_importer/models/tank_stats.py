@@ -70,24 +70,29 @@ class TankStatsImporter():
         
         tankstats = TankStatsAPI()
         games = tankstats.getScheduleGames(week=week, season=season)
-            
+        
+        game_ids = NFLGame.objects.filter(season_id=season).values_list('id', flat=True)
         new_games = []
         for game in games["body"]:
-            try:
-                new_games.append(NFLGame(                    
-                    id = game["gameID"],
-                    away_team_id = NFLTeam.cleanAbbreviation(game["away"]),
-                    home_team_id = NFLTeam.cleanAbbreviation(game["home"]),
-                    date = game["gameDate"],
-                    time = game["gameTime"],
-                    week = int(game["gameWeek"].replace('Week ', '')),
-                    # season = int(game["season"]),
-                    season = season,
-                ))
-            except Exception as exception:
-                print(f"{exception}")
-                print("...from the following data...")
-                print(json.dumps(game))
+            # skip if game ID is already found in db
+            if game["gameID"] not in game_ids:
+                try:
+                    new_games.append(NFLGame(                    
+                        id = game["gameID"],
+                        away_team_id = NFLTeam.cleanAbbreviation(game["away"]),
+                        home_team_id = NFLTeam.cleanAbbreviation(game["home"]),
+                        date = game["gameDate"],
+                        time = game["gameTime"],
+                        week = int(game["gameWeek"].replace('Week ', '')),
+                        # season = int(game["season"]),
+                        season_id = season,
+                    ))
+                except Exception as exception:
+                    print(f"{exception}")
+                    print("...from the following data...")
+                    print(json.dumps(game))
+            else:
+                print(f"NFLGame {game['gameID']} already exists")
         games_imported = NFLGame.objects.bulk_create(new_games) 
         print(f"Imported {len(games_imported)} games")
         return games_imported
