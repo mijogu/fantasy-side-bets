@@ -8,7 +8,7 @@ from side_bets.models import \
     NFLPlayer, NFLTeam
 
 class SleeperAPI:
-    use_json_server = True
+    use_json_server = False
     to_csv = False
 
     username = 'mijogu'
@@ -140,25 +140,29 @@ class SleeperImporter:
         sleeper_matchups = sleeper.getLeagueMatchups(league_id, week)
 
         league = FantasyLeague.objects.get(league_id=league_id)
+        rosters_for_week = FantasyRosterWeek.objects.filter(league_id=league.id, game_week=week).values_list("team_id", flat=True)
         new_rosters = []
         for roster in sleeper_matchups:
             roster_team = league.fantasy_teams.get(roster_id=roster["roster_id"])
             # opponent_team = FantasyTeam.objects.get(sleeper_user_id=roster["owner_id"])
             
-            starters = ','.join(roster['starters'])
-            bench_players = set(roster['players']).difference(set(roster['starters']))
-            bench = ','.join(bench_players)
+            if (roster_team.id not in rosters_for_week):
+                starters = ','.join(roster['starters'])
+                bench_players = set(roster['players']).difference(set(roster['starters']))
+                bench = ','.join(bench_players)
 
-            new_rosters.append(FantasyRosterWeek(
-                starters = starters,
-                bench = bench,
-                roster_id = roster["roster_id"],
-                matchup_id = roster["matchup_id"],
-                game_week = week,
-                league = league,
-                team = roster_team,
-                # opponent = opponent_team,
-            ))
+                new_rosters.append(FantasyRosterWeek(
+                    starters = starters,
+                    bench = bench,
+                    roster_id = roster["roster_id"],
+                    matchup_id = roster["matchup_id"],
+                    game_week = week,
+                    league = league,
+                    team = roster_team,
+                    # opponent = opponent_team,
+                ))
+            else: 
+                print(f"Roster already found for {roster_team} in week {week}")
         rosters_imported = FantasyRosterWeek.objects.bulk_create(new_rosters)
         print(f"Imported {len(rosters_imported)} rosters")
         return rosters_imported
