@@ -3,6 +3,8 @@ from django.db import models
 # from nfl_team import NFLTeam
 
 class NFLPlayer(models.Model):
+    relevant_positions = ["QB", "WR", "RB", "TE"]
+
     #fields
     sleeper_id = models.CharField(max_length=30, unique=True, blank=True, null=True)
     espn_id = models.CharField(max_length=30, unique=True, blank=True, null=True)
