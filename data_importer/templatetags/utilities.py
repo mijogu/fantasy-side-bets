@@ -7,6 +7,7 @@ register = template.Library()
 
 @register.filter
 def nice_dump(obj):
+    # return type(obj)
     return json.dumps(
         model_to_dict(obj), 
         sort_keys=True, 
