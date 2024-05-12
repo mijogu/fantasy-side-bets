@@ -164,11 +164,11 @@ class TankStatsImporter():
         
         # TODO confirm this works
         fields_updated = NFLGame.objects.filter(id=game_id).update(
-            away_score=game_result['awayPts'],
-            away_result=game_result['awayResult'],
-            home_score=game_result['homePts'],
-            home_result=game_result['homeResult'],
-            scores_imported=True,
+            away_score=game_result['body']['awayPts'],
+            away_result=game_result['body']['awayResult'],
+            home_score=game_result['body']['homePts'],
+            home_result=game_result['body']['homeResult'],
+            are_scores_imported=True,
         )
 
         print(f"Imported {len(boxscores_imported)} boxscores")
