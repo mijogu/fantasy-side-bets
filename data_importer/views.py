@@ -31,7 +31,7 @@ def league(request, pk):
             pass    
         elif request.POST['import_type'] == 'delete':
             league.delete()
-            return redirect('leagues')
+            return redirect('league_list')
         elif request.POST['import_type'] == 'deleteteams':
             teams = league.fantasy_teams.all()
             teams.delete()
